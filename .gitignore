@@ -1,0 +1,32 @@
+﻿## Common .gitignore for .NET + VS Code projects: ##
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+**/.vs/
+*.user
+*.suo
+
+# VS Code
+.vscode/
+
+# NuGet
+*.nupkg
+packages/
+project.assets.json
+
+# Environment / secrets
+.env
+.env.*
+appsettings.Development.json
+local.settings.json        # Azure Functions
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+## End of - Common .gitignore for .NET + VS Code projects: ##
