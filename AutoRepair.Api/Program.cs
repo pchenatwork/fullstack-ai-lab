@@ -3,6 +3,8 @@ using Azure.AI.OpenAI;
 using Azure.Identity;
 using Azure.Search.Documents;
 using Azure.Search.Documents.Indexes;
+using Microsoft.AspNetCore.HttpOverrides;
+
 //using Microsoft.EntityFrameworkCore;
 //using MongoDB.Driver;
 //using Npgsql.EntityFrameworkCore.PostgreSQL;
@@ -14,7 +16,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Key Vault — Azure-hosted environments only (Render uses env vars)
 if (builder.Environment.IsProduction())
 {
-    builder.Configuration.AddAzureKeyVault(
+ builder.Configuration.AddAzureKeyVault(
         new Uri("https://kv-autorepair.vault.azure.net/"), new DefaultAzureCredential());
 }
 
@@ -75,6 +77,11 @@ builder.Services.AddSingleton(sp =>
 **/
 
 var app = builder.Build();
+app.UseForwardedHeaders(new ForwardedHeadersOptions   // ? first
+{
+    // To address Render.com HTTP/HTTPS confusion
+    ForwardedHeaders = ForwardedHeaders.XForwardedProto
+});
 app.UseCors();
 
 // Configure the HTTP request pipeline.
