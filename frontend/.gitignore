@@ -1,0 +1,9 @@
+node_modules
+dist/
+build/
+dist-ssr
+# ?? # .env
+*.local
+*.log
+.vscode/*
+!.vscode/extensions.json
