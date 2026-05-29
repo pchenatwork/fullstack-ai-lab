@@ -16,8 +16,7 @@ const demoLabels: Record<string, string> = {
 };
 
 function buildCrumbs(pathname: string): Crumb[] {
-  if (pathname === "/") return [{ label: "Home" }];
-  if (pathname === "/contact") return [{ label: "Contact" }];
+  if (pathname === "/") return [{ label: "About Me" }];
 
   if (pathname === "/projects") return [{ label: "Project Showcase" }];
 
@@ -30,7 +29,7 @@ function buildCrumbs(pathname: string): Crumb[] {
     ];
   }
 
-  return [{ label: "Home" }];
+  return [{ label: "About Me" }];
 }
 
 export function Breadcrumb() {

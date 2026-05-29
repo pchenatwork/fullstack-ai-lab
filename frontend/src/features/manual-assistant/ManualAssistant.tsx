@@ -31,7 +31,7 @@ export function ManualAssistant() {
             Service Manual RAG Q&amp;A
           </h1>
           <p style={{ color: "var(--text-muted)", fontSize: 14, maxWidth: 680, marginTop: 6 }}>
-            Ask a question about the Honda Odyssey or Acura TL service manual.
+            Ask a question about the 2005-2006Honda Odyssey.
           </p>
         </div>
         {entries.length > 0 && (
