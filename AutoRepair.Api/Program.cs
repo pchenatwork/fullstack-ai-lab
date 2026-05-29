@@ -1,3 +1,5 @@
+﻿using AutoRepair.Api.Repositories;
+using AutoRepair.Api.Services;
 using Azure;
 using Azure.AI.OpenAI;
 using Azure.Identity;
@@ -13,7 +15,7 @@ using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Key Vault � Azure-hosted environments only (Render uses env vars)
+// Key Vault — Azure-hosted environments only (Render uses env vars)
 if (builder.Environment.IsProduction())
 {
  builder.Configuration.AddAzureKeyVault(
@@ -48,14 +50,31 @@ builder.Services.AddSingleton(sp => {
     );
 });
 
+// Repository: Singleton — vehicles.json is loaded once for the app's lifetime.
+builder.Services.AddSingleton<IVehicleRepository, JsonFileVehicleRepository>();
+
+// Service: Scoped — conventional default; thin pass-through today.
+builder.Services.AddScoped<IVehicleService, VehicleService>();
+
 builder.Services.AddControllers();
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-// OpenAPI � built-in .NET 9 (no Swashbuckle needed)
+// OpenAPI — built-in .NET 9 (no Swashbuckle needed)
 builder.Services.AddOpenApi();
 
 builder.Services.AddCors(o => o.AddDefaultPolicy(p =>
     p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
+const string CorsPolicy = "frontend";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(CorsPolicy, policy =>
+        policy.WithOrigins(
+                  "http://localhost:3000",          // Vite dev
+                  "https://YOUR-SWA-URL.azurestaticapps.net")  // deployed frontend
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
 
 /** Lab 6 : Add services for PostgreSQL, Redis, and MongoDB.
 // PostgreSQL via EF Core
@@ -77,7 +96,7 @@ builder.Services.AddSingleton(sp =>
 **/
 
 var app = builder.Build();
-app.UseForwardedHeaders(new ForwardedHeadersOptions   // ? first
+app.UseForwardedHeaders(new ForwardedHeadersOptions   // ← first
 {
     // To address Render.com HTTP/HTTPS confusion
     ForwardedHeaders = ForwardedHeaders.XForwardedProto
@@ -88,7 +107,7 @@ app.UseCors();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();              // /openapi/v1.json
-    app.MapScalarApiReference();   // /scalar/v1 � interactive UI
+    app.MapScalarApiReference();   // /scalar/v1 — interactive UI
 }
 
 // Since HTTPS only, no HTTP profile, we don't need this redirect

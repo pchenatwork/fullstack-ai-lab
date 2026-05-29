@@ -1,0 +1,2982 @@
+[
+  {
+    "id": 1,
+    "make": "Toyota",
+    "model": "Camry",
+    "generation": "5th gen",
+    "platformCode": "XV30",
+    "yearFrom": 2002,
+    "yearTo": 2006,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 2,
+    "make": "Toyota",
+    "model": "Camry",
+    "generation": "6th gen",
+    "platformCode": "XV40",
+    "yearFrom": 2007,
+    "yearTo": 2011,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 3,
+    "make": "Toyota",
+    "model": "Camry",
+    "generation": "7th gen",
+    "platformCode": "XV50",
+    "yearFrom": 2012,
+    "yearTo": 2017,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 4,
+    "make": "Toyota",
+    "model": "Camry",
+    "generation": "8th gen",
+    "platformCode": "XV70",
+    "yearFrom": 2018,
+    "yearTo": null,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 5,
+    "make": "Toyota",
+    "model": "Corolla",
+    "generation": "8th gen",
+    "platformCode": "E110",
+    "yearFrom": 1998,
+    "yearTo": 2002,
+    "class": "Compact Car"
+  },
+  {
+    "id": 6,
+    "make": "Toyota",
+    "model": "Corolla",
+    "generation": "9th gen",
+    "platformCode": "E120",
+    "yearFrom": 2003,
+    "yearTo": 2008,
+    "class": "Compact Car"
+  },
+  {
+    "id": 7,
+    "make": "Toyota",
+    "model": "Corolla",
+    "generation": "10th gen",
+    "platformCode": "E140",
+    "yearFrom": 2009,
+    "yearTo": 2013,
+    "class": "Compact Car"
+  },
+  {
+    "id": 8,
+    "make": "Toyota",
+    "model": "Corolla",
+    "generation": "11th gen",
+    "platformCode": "E170",
+    "yearFrom": 2014,
+    "yearTo": 2019,
+    "class": "Compact Car"
+  },
+  {
+    "id": 9,
+    "make": "Toyota",
+    "model": "Corolla",
+    "generation": "12th gen",
+    "platformCode": "E210",
+    "yearFrom": 2020,
+    "yearTo": null,
+    "class": "Compact Car"
+  },
+  {
+    "id": 10,
+    "make": "Toyota",
+    "model": "RAV4",
+    "generation": "2nd gen",
+    "platformCode": "XA20",
+    "yearFrom": 2001,
+    "yearTo": 2005,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 11,
+    "make": "Toyota",
+    "model": "RAV4",
+    "generation": "3rd gen",
+    "platformCode": "XA30",
+    "yearFrom": 2006,
+    "yearTo": 2012,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 12,
+    "make": "Toyota",
+    "model": "RAV4",
+    "generation": "4th gen",
+    "platformCode": "XA40",
+    "yearFrom": 2013,
+    "yearTo": 2018,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 13,
+    "make": "Toyota",
+    "model": "RAV4",
+    "generation": "5th gen",
+    "platformCode": "XA50",
+    "yearFrom": 2019,
+    "yearTo": null,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 14,
+    "make": "Toyota",
+    "model": "Highlander",
+    "generation": "1st gen",
+    "platformCode": "XU20",
+    "yearFrom": 2001,
+    "yearTo": 2007,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 15,
+    "make": "Toyota",
+    "model": "Highlander",
+    "generation": "2nd gen",
+    "platformCode": "XU40",
+    "yearFrom": 2008,
+    "yearTo": 2013,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 16,
+    "make": "Toyota",
+    "model": "Highlander",
+    "generation": "3rd gen",
+    "platformCode": "XU50",
+    "yearFrom": 2014,
+    "yearTo": 2019,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 17,
+    "make": "Toyota",
+    "model": "Highlander",
+    "generation": "4th gen",
+    "platformCode": "XU70",
+    "yearFrom": 2020,
+    "yearTo": null,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 18,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "generation": "1st gen",
+    "platformCode": "N190",
+    "yearFrom": 1995,
+    "yearTo": 2004,
+    "class": "Midsize Pickup"
+  },
+  {
+    "id": 19,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "generation": "2nd gen",
+    "platformCode": "N220",
+    "yearFrom": 2005,
+    "yearTo": 2015,
+    "class": "Midsize Pickup"
+  },
+  {
+    "id": 20,
+    "make": "Toyota",
+    "model": "Tacoma",
+    "generation": "3rd gen",
+    "platformCode": "N300",
+    "yearFrom": 2016,
+    "yearTo": 2023,
+    "class": "Midsize Pickup"
+  },
+  {
+    "id": 21,
+    "make": "Toyota",
+    "model": "Tundra",
+    "generation": "1st gen",
+    "platformCode": "XK30",
+    "yearFrom": 2000,
+    "yearTo": 2006,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 22,
+    "make": "Toyota",
+    "model": "Tundra",
+    "generation": "2nd gen",
+    "platformCode": "XK50",
+    "yearFrom": 2007,
+    "yearTo": 2021,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 23,
+    "make": "Toyota",
+    "model": "Tundra",
+    "generation": "3rd gen",
+    "platformCode": "XK70",
+    "yearFrom": 2022,
+    "yearTo": null,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 24,
+    "make": "Toyota",
+    "model": "4Runner",
+    "generation": "3rd gen",
+    "platformCode": "N180",
+    "yearFrom": 1996,
+    "yearTo": 2002,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 25,
+    "make": "Toyota",
+    "model": "4Runner",
+    "generation": "4th gen",
+    "platformCode": "N210",
+    "yearFrom": 2003,
+    "yearTo": 2009,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 26,
+    "make": "Toyota",
+    "model": "4Runner",
+    "generation": "5th gen",
+    "platformCode": "N280",
+    "yearFrom": 2010,
+    "yearTo": 2024,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 27,
+    "make": "Toyota",
+    "model": "Prius",
+    "generation": "1st gen",
+    "platformCode": "XW10",
+    "yearFrom": 2001,
+    "yearTo": 2003,
+    "class": "Compact Car"
+  },
+  {
+    "id": 28,
+    "make": "Toyota",
+    "model": "Prius",
+    "generation": "2nd gen",
+    "platformCode": "XW20",
+    "yearFrom": 2004,
+    "yearTo": 2009,
+    "class": "Compact Car"
+  },
+  {
+    "id": 29,
+    "make": "Toyota",
+    "model": "Prius",
+    "generation": "3rd gen",
+    "platformCode": "XW30",
+    "yearFrom": 2010,
+    "yearTo": 2015,
+    "class": "Compact Car"
+  },
+  {
+    "id": 30,
+    "make": "Toyota",
+    "model": "Prius",
+    "generation": "4th gen",
+    "platformCode": "XW50",
+    "yearFrom": 2016,
+    "yearTo": 2022,
+    "class": "Compact Car"
+  },
+  {
+    "id": 31,
+    "make": "Toyota",
+    "model": "Sienna",
+    "generation": "2nd gen",
+    "platformCode": "XL20",
+    "yearFrom": 2004,
+    "yearTo": 2010,
+    "class": "Minivan"
+  },
+  {
+    "id": 32,
+    "make": "Toyota",
+    "model": "Sienna",
+    "generation": "3rd gen",
+    "platformCode": "XL30",
+    "yearFrom": 2011,
+    "yearTo": 2020,
+    "class": "Minivan"
+  },
+  {
+    "id": 33,
+    "make": "Toyota",
+    "model": "Sienna",
+    "generation": "4th gen",
+    "platformCode": "XL40",
+    "yearFrom": 2021,
+    "yearTo": null,
+    "class": "Minivan"
+  },
+  {
+    "id": 34,
+    "make": "Honda",
+    "model": "Accord",
+    "generation": "6th gen",
+    "platformCode": "CG/CK",
+    "yearFrom": 1998,
+    "yearTo": 2002,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 35,
+    "make": "Honda",
+    "model": "Accord",
+    "generation": "7th gen",
+    "platformCode": "CL/CM",
+    "yearFrom": 2003,
+    "yearTo": 2007,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 36,
+    "make": "Honda",
+    "model": "Accord",
+    "generation": "8th gen",
+    "platformCode": "CP/CS",
+    "yearFrom": 2008,
+    "yearTo": 2012,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 37,
+    "make": "Honda",
+    "model": "Accord",
+    "generation": "9th gen",
+    "platformCode": "CR/CT",
+    "yearFrom": 2013,
+    "yearTo": 2017,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 38,
+    "make": "Honda",
+    "model": "Accord",
+    "generation": "10th gen",
+    "platformCode": "CV",
+    "yearFrom": 2018,
+    "yearTo": 2022,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 39,
+    "make": "Honda",
+    "model": "Accord",
+    "generation": "11th gen",
+    "platformCode": "CY",
+    "yearFrom": 2023,
+    "yearTo": null,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 40,
+    "make": "Honda",
+    "model": "Civic",
+    "generation": "6th gen",
+    "platformCode": "EJ/EK/EM",
+    "yearFrom": 1996,
+    "yearTo": 2000,
+    "class": "Compact Car"
+  },
+  {
+    "id": 41,
+    "make": "Honda",
+    "model": "Civic",
+    "generation": "7th gen",
+    "platformCode": "ES/EP",
+    "yearFrom": 2001,
+    "yearTo": 2005,
+    "class": "Compact Car"
+  },
+  {
+    "id": 42,
+    "make": "Honda",
+    "model": "Civic",
+    "generation": "8th gen",
+    "platformCode": "FA/FG/FD",
+    "yearFrom": 2006,
+    "yearTo": 2011,
+    "class": "Compact Car"
+  },
+  {
+    "id": 43,
+    "make": "Honda",
+    "model": "Civic",
+    "generation": "9th gen",
+    "platformCode": "FB/FG",
+    "yearFrom": 2012,
+    "yearTo": 2015,
+    "class": "Compact Car"
+  },
+  {
+    "id": 44,
+    "make": "Honda",
+    "model": "Civic",
+    "generation": "10th gen",
+    "platformCode": "FC/FK",
+    "yearFrom": 2016,
+    "yearTo": 2021,
+    "class": "Compact Car"
+  },
+  {
+    "id": 45,
+    "make": "Honda",
+    "model": "Civic",
+    "generation": "11th gen",
+    "platformCode": "FE/FL",
+    "yearFrom": 2022,
+    "yearTo": null,
+    "class": "Compact Car"
+  },
+  {
+    "id": 46,
+    "make": "Honda",
+    "model": "CR-V",
+    "generation": "1st gen",
+    "platformCode": "RD1",
+    "yearFrom": 1997,
+    "yearTo": 2001,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 47,
+    "make": "Honda",
+    "model": "CR-V",
+    "generation": "2nd gen",
+    "platformCode": "RD4",
+    "yearFrom": 2002,
+    "yearTo": 2006,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 48,
+    "make": "Honda",
+    "model": "CR-V",
+    "generation": "3rd gen",
+    "platformCode": "RE",
+    "yearFrom": 2007,
+    "yearTo": 2011,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 49,
+    "make": "Honda",
+    "model": "CR-V",
+    "generation": "4th gen",
+    "platformCode": "RM",
+    "yearFrom": 2012,
+    "yearTo": 2016,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 50,
+    "make": "Honda",
+    "model": "CR-V",
+    "generation": "5th gen",
+    "platformCode": "RW",
+    "yearFrom": 2017,
+    "yearTo": 2022,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 51,
+    "make": "Honda",
+    "model": "CR-V",
+    "generation": "6th gen",
+    "platformCode": "RS",
+    "yearFrom": 2023,
+    "yearTo": null,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 52,
+    "make": "Honda",
+    "model": "Pilot",
+    "generation": "1st gen",
+    "platformCode": "YF1",
+    "yearFrom": 2003,
+    "yearTo": 2008,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 53,
+    "make": "Honda",
+    "model": "Pilot",
+    "generation": "2nd gen",
+    "platformCode": "YF3",
+    "yearFrom": 2009,
+    "yearTo": 2015,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 54,
+    "make": "Honda",
+    "model": "Pilot",
+    "generation": "3rd gen",
+    "platformCode": "YF5",
+    "yearFrom": 2016,
+    "yearTo": 2022,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 55,
+    "make": "Honda",
+    "model": "Pilot",
+    "generation": "4th gen",
+    "platformCode": "YG",
+    "yearFrom": 2023,
+    "yearTo": null,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 56,
+    "make": "Honda",
+    "model": "Odyssey",
+    "generation": "2nd gen",
+    "platformCode": "RL1",
+    "yearFrom": 1999,
+    "yearTo": 2004,
+    "class": "Minivan"
+  },
+  {
+    "id": 57,
+    "make": "Honda",
+    "model": "Odyssey",
+    "generation": "3rd gen",
+    "platformCode": "RL3",
+    "yearFrom": 2005,
+    "yearTo": 2010,
+    "class": "Minivan"
+  },
+  {
+    "id": 58,
+    "make": "Honda",
+    "model": "Odyssey",
+    "generation": "4th gen",
+    "platformCode": "RL5",
+    "yearFrom": 2011,
+    "yearTo": 2017,
+    "class": "Minivan"
+  },
+  {
+    "id": 59,
+    "make": "Honda",
+    "model": "Odyssey",
+    "generation": "5th gen",
+    "platformCode": "RL6",
+    "yearFrom": 2018,
+    "yearTo": null,
+    "class": "Minivan"
+  },
+  {
+    "id": 60,
+    "make": "Honda",
+    "model": "Fit",
+    "generation": "1st gen",
+    "platformCode": "GD",
+    "yearFrom": 2007,
+    "yearTo": 2008,
+    "class": "Subcompact Car"
+  },
+  {
+    "id": 61,
+    "make": "Honda",
+    "model": "Fit",
+    "generation": "2nd gen",
+    "platformCode": "GE",
+    "yearFrom": 2009,
+    "yearTo": 2013,
+    "class": "Subcompact Car"
+  },
+  {
+    "id": 62,
+    "make": "Honda",
+    "model": "Fit",
+    "generation": "3rd gen",
+    "platformCode": "GK",
+    "yearFrom": 2015,
+    "yearTo": 2020,
+    "class": "Subcompact Car"
+  },
+  {
+    "id": 63,
+    "make": "Ford",
+    "model": "F-150",
+    "generation": "10th gen",
+    "platformCode": "PN96",
+    "yearFrom": 1997,
+    "yearTo": 2003,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 64,
+    "make": "Ford",
+    "model": "F-150",
+    "generation": "11th gen",
+    "platformCode": "P221",
+    "yearFrom": 2004,
+    "yearTo": 2008,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 65,
+    "make": "Ford",
+    "model": "F-150",
+    "generation": "12th gen",
+    "platformCode": "P415",
+    "yearFrom": 2009,
+    "yearTo": 2014,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 66,
+    "make": "Ford",
+    "model": "F-150",
+    "generation": "13th gen",
+    "platformCode": "P552",
+    "yearFrom": 2015,
+    "yearTo": 2020,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 67,
+    "make": "Ford",
+    "model": "F-150",
+    "generation": "14th gen",
+    "platformCode": "P702",
+    "yearFrom": 2021,
+    "yearTo": null,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 68,
+    "make": "Ford",
+    "model": "Escape",
+    "generation": "1st gen",
+    "platformCode": "U204",
+    "yearFrom": 2001,
+    "yearTo": 2007,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 69,
+    "make": "Ford",
+    "model": "Escape",
+    "generation": "2nd gen",
+    "platformCode": "U251",
+    "yearFrom": 2008,
+    "yearTo": 2012,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 70,
+    "make": "Ford",
+    "model": "Escape",
+    "generation": "3rd gen",
+    "platformCode": "C520",
+    "yearFrom": 2013,
+    "yearTo": 2019,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 71,
+    "make": "Ford",
+    "model": "Escape",
+    "generation": "4th gen",
+    "platformCode": "CX482",
+    "yearFrom": 2020,
+    "yearTo": null,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 72,
+    "make": "Ford",
+    "model": "Explorer",
+    "generation": "2nd gen",
+    "platformCode": "UN105",
+    "yearFrom": 1995,
+    "yearTo": 2001,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 73,
+    "make": "Ford",
+    "model": "Explorer",
+    "generation": "3rd gen",
+    "platformCode": "U152",
+    "yearFrom": 2002,
+    "yearTo": 2005,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 74,
+    "make": "Ford",
+    "model": "Explorer",
+    "generation": "4th gen",
+    "platformCode": "U251",
+    "yearFrom": 2006,
+    "yearTo": 2010,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 75,
+    "make": "Ford",
+    "model": "Explorer",
+    "generation": "5th gen",
+    "platformCode": "U502",
+    "yearFrom": 2011,
+    "yearTo": 2019,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 76,
+    "make": "Ford",
+    "model": "Explorer",
+    "generation": "6th gen",
+    "platformCode": "U625",
+    "yearFrom": 2020,
+    "yearTo": null,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 77,
+    "make": "Ford",
+    "model": "Mustang",
+    "generation": "4th gen (SN95)",
+    "platformCode": "SN95",
+    "yearFrom": 1994,
+    "yearTo": 2004,
+    "class": "Sports Car"
+  },
+  {
+    "id": 78,
+    "make": "Ford",
+    "model": "Mustang",
+    "generation": "5th gen",
+    "platformCode": "S197",
+    "yearFrom": 2005,
+    "yearTo": 2014,
+    "class": "Sports Car"
+  },
+  {
+    "id": 79,
+    "make": "Ford",
+    "model": "Mustang",
+    "generation": "6th gen",
+    "platformCode": "S550",
+    "yearFrom": 2015,
+    "yearTo": 2023,
+    "class": "Sports Car"
+  },
+  {
+    "id": 80,
+    "make": "Ford",
+    "model": "Mustang",
+    "generation": "7th gen",
+    "platformCode": "S650",
+    "yearFrom": 2024,
+    "yearTo": null,
+    "class": "Sports Car"
+  },
+  {
+    "id": 81,
+    "make": "Ford",
+    "model": "Focus",
+    "generation": "1st gen",
+    "platformCode": "C170",
+    "yearFrom": 2000,
+    "yearTo": 2007,
+    "class": "Compact Car"
+  },
+  {
+    "id": 82,
+    "make": "Ford",
+    "model": "Focus",
+    "generation": "2nd gen (NA)",
+    "platformCode": "C307",
+    "yearFrom": 2008,
+    "yearTo": 2011,
+    "class": "Compact Car"
+  },
+  {
+    "id": 83,
+    "make": "Ford",
+    "model": "Focus",
+    "generation": "3rd gen",
+    "platformCode": "C346",
+    "yearFrom": 2012,
+    "yearTo": 2018,
+    "class": "Compact Car"
+  },
+  {
+    "id": 84,
+    "make": "Ford",
+    "model": "Edge",
+    "generation": "1st gen",
+    "platformCode": "CD3",
+    "yearFrom": 2007,
+    "yearTo": 2014,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 85,
+    "make": "Ford",
+    "model": "Edge",
+    "generation": "2nd gen",
+    "platformCode": "CD4",
+    "yearFrom": 2015,
+    "yearTo": 2024,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 86,
+    "make": "Chevrolet",
+    "model": "Silverado 1500",
+    "generation": "1st gen",
+    "platformCode": "GMT800",
+    "yearFrom": 1999,
+    "yearTo": 2006,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 87,
+    "make": "Chevrolet",
+    "model": "Silverado 1500",
+    "generation": "2nd gen",
+    "platformCode": "GMT900",
+    "yearFrom": 2007,
+    "yearTo": 2013,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 88,
+    "make": "Chevrolet",
+    "model": "Silverado 1500",
+    "generation": "3rd gen",
+    "platformCode": "K2XX",
+    "yearFrom": 2014,
+    "yearTo": 2018,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 89,
+    "make": "Chevrolet",
+    "model": "Silverado 1500",
+    "generation": "4th gen",
+    "platformCode": "T1XX",
+    "yearFrom": 2019,
+    "yearTo": null,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 90,
+    "make": "Chevrolet",
+    "model": "Equinox",
+    "generation": "1st gen",
+    "platformCode": "Theta",
+    "yearFrom": 2005,
+    "yearTo": 2009,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 91,
+    "make": "Chevrolet",
+    "model": "Equinox",
+    "generation": "2nd gen",
+    "platformCode": "Theta",
+    "yearFrom": 2010,
+    "yearTo": 2017,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 92,
+    "make": "Chevrolet",
+    "model": "Equinox",
+    "generation": "3rd gen",
+    "platformCode": "D2XX",
+    "yearFrom": 2018,
+    "yearTo": 2024,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 93,
+    "make": "Chevrolet",
+    "model": "Tahoe",
+    "generation": "2nd gen (GMT800)",
+    "platformCode": "GMT800",
+    "yearFrom": 2000,
+    "yearTo": 2006,
+    "class": "Full-Size SUV"
+  },
+  {
+    "id": 94,
+    "make": "Chevrolet",
+    "model": "Tahoe",
+    "generation": "3rd gen",
+    "platformCode": "GMT900",
+    "yearFrom": 2007,
+    "yearTo": 2014,
+    "class": "Full-Size SUV"
+  },
+  {
+    "id": 95,
+    "make": "Chevrolet",
+    "model": "Tahoe",
+    "generation": "4th gen",
+    "platformCode": "K2UC",
+    "yearFrom": 2015,
+    "yearTo": 2020,
+    "class": "Full-Size SUV"
+  },
+  {
+    "id": 96,
+    "make": "Chevrolet",
+    "model": "Tahoe",
+    "generation": "5th gen",
+    "platformCode": "T1XC",
+    "yearFrom": 2021,
+    "yearTo": null,
+    "class": "Full-Size SUV"
+  },
+  {
+    "id": 97,
+    "make": "Chevrolet",
+    "model": "Malibu",
+    "generation": "5th gen",
+    "platformCode": "Epsilon",
+    "yearFrom": 2004,
+    "yearTo": 2007,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 98,
+    "make": "Chevrolet",
+    "model": "Malibu",
+    "generation": "7th gen",
+    "platformCode": "Epsilon II",
+    "yearFrom": 2008,
+    "yearTo": 2012,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 99,
+    "make": "Chevrolet",
+    "model": "Malibu",
+    "generation": "8th gen",
+    "platformCode": "Epsilon II",
+    "yearFrom": 2013,
+    "yearTo": 2015,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 100,
+    "make": "Chevrolet",
+    "model": "Malibu",
+    "generation": "9th gen",
+    "platformCode": "E2XX",
+    "yearFrom": 2016,
+    "yearTo": 2024,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 101,
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "generation": "C5",
+    "platformCode": "C5",
+    "yearFrom": 1997,
+    "yearTo": 2004,
+    "class": "Sports Car"
+  },
+  {
+    "id": 102,
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "generation": "C6",
+    "platformCode": "C6",
+    "yearFrom": 2005,
+    "yearTo": 2013,
+    "class": "Sports Car"
+  },
+  {
+    "id": 103,
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "generation": "C7",
+    "platformCode": "C7",
+    "yearFrom": 2014,
+    "yearTo": 2019,
+    "class": "Sports Car"
+  },
+  {
+    "id": 104,
+    "make": "Chevrolet",
+    "model": "Corvette",
+    "generation": "C8",
+    "platformCode": "C8",
+    "yearFrom": 2020,
+    "yearTo": null,
+    "class": "Sports Car"
+  },
+  {
+    "id": 105,
+    "make": "Nissan",
+    "model": "Altima",
+    "generation": "2nd gen",
+    "platformCode": "L30",
+    "yearFrom": 1998,
+    "yearTo": 2001,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 106,
+    "make": "Nissan",
+    "model": "Altima",
+    "generation": "3rd gen",
+    "platformCode": "L31",
+    "yearFrom": 2002,
+    "yearTo": 2006,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 107,
+    "make": "Nissan",
+    "model": "Altima",
+    "generation": "4th gen",
+    "platformCode": "L32",
+    "yearFrom": 2007,
+    "yearTo": 2012,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 108,
+    "make": "Nissan",
+    "model": "Altima",
+    "generation": "5th gen",
+    "platformCode": "L33",
+    "yearFrom": 2013,
+    "yearTo": 2018,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 109,
+    "make": "Nissan",
+    "model": "Altima",
+    "generation": "6th gen",
+    "platformCode": "L34",
+    "yearFrom": 2019,
+    "yearTo": null,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 110,
+    "make": "Nissan",
+    "model": "Rogue",
+    "generation": "1st gen",
+    "platformCode": "S35",
+    "yearFrom": 2008,
+    "yearTo": 2013,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 111,
+    "make": "Nissan",
+    "model": "Rogue",
+    "generation": "2nd gen",
+    "platformCode": "T32",
+    "yearFrom": 2014,
+    "yearTo": 2020,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 112,
+    "make": "Nissan",
+    "model": "Rogue",
+    "generation": "3rd gen",
+    "platformCode": "T33",
+    "yearFrom": 2021,
+    "yearTo": null,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 113,
+    "make": "Nissan",
+    "model": "Sentra",
+    "generation": "5th gen",
+    "platformCode": "B15",
+    "yearFrom": 2000,
+    "yearTo": 2006,
+    "class": "Compact Car"
+  },
+  {
+    "id": 114,
+    "make": "Nissan",
+    "model": "Sentra",
+    "generation": "6th gen",
+    "platformCode": "B16",
+    "yearFrom": 2007,
+    "yearTo": 2012,
+    "class": "Compact Car"
+  },
+  {
+    "id": 115,
+    "make": "Nissan",
+    "model": "Sentra",
+    "generation": "7th gen",
+    "platformCode": "B17",
+    "yearFrom": 2013,
+    "yearTo": 2019,
+    "class": "Compact Car"
+  },
+  {
+    "id": 116,
+    "make": "Nissan",
+    "model": "Sentra",
+    "generation": "8th gen",
+    "platformCode": "B18",
+    "yearFrom": 2020,
+    "yearTo": null,
+    "class": "Compact Car"
+  },
+  {
+    "id": 117,
+    "make": "Nissan",
+    "model": "Pathfinder",
+    "generation": "2nd gen",
+    "platformCode": "R50",
+    "yearFrom": 1996,
+    "yearTo": 2004,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 118,
+    "make": "Nissan",
+    "model": "Pathfinder",
+    "generation": "3rd gen",
+    "platformCode": "R51",
+    "yearFrom": 2005,
+    "yearTo": 2012,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 119,
+    "make": "Nissan",
+    "model": "Pathfinder",
+    "generation": "4th gen",
+    "platformCode": "R52",
+    "yearFrom": 2013,
+    "yearTo": 2020,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 120,
+    "make": "Nissan",
+    "model": "Pathfinder",
+    "generation": "5th gen",
+    "platformCode": "R53",
+    "yearFrom": 2022,
+    "yearTo": null,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 121,
+    "make": "Subaru",
+    "model": "Outback",
+    "generation": "2nd gen",
+    "platformCode": "BH",
+    "yearFrom": 2000,
+    "yearTo": 2004,
+    "class": "Wagon"
+  },
+  {
+    "id": 122,
+    "make": "Subaru",
+    "model": "Outback",
+    "generation": "3rd gen",
+    "platformCode": "BP",
+    "yearFrom": 2005,
+    "yearTo": 2009,
+    "class": "Wagon"
+  },
+  {
+    "id": 123,
+    "make": "Subaru",
+    "model": "Outback",
+    "generation": "4th gen",
+    "platformCode": "BR",
+    "yearFrom": 2010,
+    "yearTo": 2014,
+    "class": "Wagon"
+  },
+  {
+    "id": 124,
+    "make": "Subaru",
+    "model": "Outback",
+    "generation": "5th gen",
+    "platformCode": "BS",
+    "yearFrom": 2015,
+    "yearTo": 2019,
+    "class": "Wagon"
+  },
+  {
+    "id": 125,
+    "make": "Subaru",
+    "model": "Outback",
+    "generation": "6th gen",
+    "platformCode": "BT",
+    "yearFrom": 2020,
+    "yearTo": null,
+    "class": "Wagon"
+  },
+  {
+    "id": 126,
+    "make": "Subaru",
+    "model": "Forester",
+    "generation": "1st gen",
+    "platformCode": "SF",
+    "yearFrom": 1998,
+    "yearTo": 2002,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 127,
+    "make": "Subaru",
+    "model": "Forester",
+    "generation": "2nd gen",
+    "platformCode": "SG",
+    "yearFrom": 2003,
+    "yearTo": 2008,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 128,
+    "make": "Subaru",
+    "model": "Forester",
+    "generation": "3rd gen",
+    "platformCode": "SH",
+    "yearFrom": 2009,
+    "yearTo": 2013,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 129,
+    "make": "Subaru",
+    "model": "Forester",
+    "generation": "4th gen",
+    "platformCode": "SJ",
+    "yearFrom": 2014,
+    "yearTo": 2018,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 130,
+    "make": "Subaru",
+    "model": "Forester",
+    "generation": "5th gen",
+    "platformCode": "SK",
+    "yearFrom": 2019,
+    "yearTo": null,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 131,
+    "make": "Subaru",
+    "model": "Impreza",
+    "generation": "2nd gen",
+    "platformCode": "GD/GG",
+    "yearFrom": 2001,
+    "yearTo": 2007,
+    "class": "Compact Car"
+  },
+  {
+    "id": 132,
+    "make": "Subaru",
+    "model": "Impreza",
+    "generation": "3rd gen",
+    "platformCode": "GE/GH",
+    "yearFrom": 2008,
+    "yearTo": 2011,
+    "class": "Compact Car"
+  },
+  {
+    "id": 133,
+    "make": "Subaru",
+    "model": "Impreza",
+    "generation": "4th gen",
+    "platformCode": "GJ/GP",
+    "yearFrom": 2012,
+    "yearTo": 2016,
+    "class": "Compact Car"
+  },
+  {
+    "id": 134,
+    "make": "Subaru",
+    "model": "Impreza",
+    "generation": "5th gen",
+    "platformCode": "GK/GT",
+    "yearFrom": 2017,
+    "yearTo": 2023,
+    "class": "Compact Car"
+  },
+  {
+    "id": 135,
+    "make": "Mazda",
+    "model": "Mazda3",
+    "generation": "1st gen",
+    "platformCode": "BK",
+    "yearFrom": 2004,
+    "yearTo": 2009,
+    "class": "Compact Car"
+  },
+  {
+    "id": 136,
+    "make": "Mazda",
+    "model": "Mazda3",
+    "generation": "2nd gen",
+    "platformCode": "BL",
+    "yearFrom": 2010,
+    "yearTo": 2013,
+    "class": "Compact Car"
+  },
+  {
+    "id": 137,
+    "make": "Mazda",
+    "model": "Mazda3",
+    "generation": "3rd gen",
+    "platformCode": "BM/BN",
+    "yearFrom": 2014,
+    "yearTo": 2018,
+    "class": "Compact Car"
+  },
+  {
+    "id": 138,
+    "make": "Mazda",
+    "model": "Mazda3",
+    "generation": "4th gen",
+    "platformCode": "BP",
+    "yearFrom": 2019,
+    "yearTo": null,
+    "class": "Compact Car"
+  },
+  {
+    "id": 139,
+    "make": "Mazda",
+    "model": "CX-5",
+    "generation": "1st gen",
+    "platformCode": "KE",
+    "yearFrom": 2013,
+    "yearTo": 2016,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 140,
+    "make": "Mazda",
+    "model": "CX-5",
+    "generation": "2nd gen",
+    "platformCode": "KF",
+    "yearFrom": 2017,
+    "yearTo": null,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 141,
+    "make": "Mazda",
+    "model": "MX-5 Miata",
+    "generation": "2nd gen (NB)",
+    "platformCode": "NB",
+    "yearFrom": 1998,
+    "yearTo": 2005,
+    "class": "Sports Car"
+  },
+  {
+    "id": 142,
+    "make": "Mazda",
+    "model": "MX-5 Miata",
+    "generation": "3rd gen (NC)",
+    "platformCode": "NC",
+    "yearFrom": 2006,
+    "yearTo": 2015,
+    "class": "Sports Car"
+  },
+  {
+    "id": 143,
+    "make": "Mazda",
+    "model": "MX-5 Miata",
+    "generation": "4th gen (ND)",
+    "platformCode": "ND",
+    "yearFrom": 2016,
+    "yearTo": null,
+    "class": "Sports Car"
+  },
+  {
+    "id": 144,
+    "make": "Jeep",
+    "model": "Wrangler",
+    "generation": "TJ",
+    "platformCode": "TJ",
+    "yearFrom": 1997,
+    "yearTo": 2006,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 145,
+    "make": "Jeep",
+    "model": "Wrangler",
+    "generation": "JK",
+    "platformCode": "JK",
+    "yearFrom": 2007,
+    "yearTo": 2018,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 146,
+    "make": "Jeep",
+    "model": "Wrangler",
+    "generation": "JL",
+    "platformCode": "JL",
+    "yearFrom": 2018,
+    "yearTo": null,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 147,
+    "make": "Jeep",
+    "model": "Grand Cherokee",
+    "generation": "WJ",
+    "platformCode": "WJ",
+    "yearFrom": 1999,
+    "yearTo": 2004,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 148,
+    "make": "Jeep",
+    "model": "Grand Cherokee",
+    "generation": "WK",
+    "platformCode": "WK",
+    "yearFrom": 2005,
+    "yearTo": 2010,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 149,
+    "make": "Jeep",
+    "model": "Grand Cherokee",
+    "generation": "WK2",
+    "platformCode": "WK2",
+    "yearFrom": 2011,
+    "yearTo": 2021,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 150,
+    "make": "Jeep",
+    "model": "Grand Cherokee",
+    "generation": "WL",
+    "platformCode": "WL",
+    "yearFrom": 2021,
+    "yearTo": null,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 151,
+    "make": "Lexus",
+    "model": "ES",
+    "generation": "4th gen",
+    "platformCode": "XV30",
+    "yearFrom": 2002,
+    "yearTo": 2006,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 152,
+    "make": "Lexus",
+    "model": "ES",
+    "generation": "5th gen",
+    "platformCode": "XV40",
+    "yearFrom": 2007,
+    "yearTo": 2012,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 153,
+    "make": "Lexus",
+    "model": "ES",
+    "generation": "6th gen",
+    "platformCode": "XV60",
+    "yearFrom": 2013,
+    "yearTo": 2018,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 154,
+    "make": "Lexus",
+    "model": "ES",
+    "generation": "7th gen",
+    "platformCode": "XZ10",
+    "yearFrom": 2019,
+    "yearTo": null,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 155,
+    "make": "Lexus",
+    "model": "RX",
+    "generation": "2nd gen",
+    "platformCode": "XU30",
+    "yearFrom": 2004,
+    "yearTo": 2009,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 156,
+    "make": "Lexus",
+    "model": "RX",
+    "generation": "3rd gen",
+    "platformCode": "AL10",
+    "yearFrom": 2010,
+    "yearTo": 2015,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 157,
+    "make": "Lexus",
+    "model": "RX",
+    "generation": "4th gen",
+    "platformCode": "AL20",
+    "yearFrom": 2016,
+    "yearTo": 2022,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 158,
+    "make": "Lexus",
+    "model": "RX",
+    "generation": "5th gen",
+    "platformCode": "AL30",
+    "yearFrom": 2023,
+    "yearTo": null,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 159,
+    "make": "Lexus",
+    "model": "IS",
+    "generation": "1st gen",
+    "platformCode": "XE10",
+    "yearFrom": 2001,
+    "yearTo": 2005,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 160,
+    "make": "Lexus",
+    "model": "IS",
+    "generation": "2nd gen",
+    "platformCode": "XE20",
+    "yearFrom": 2006,
+    "yearTo": 2013,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 161,
+    "make": "Lexus",
+    "model": "IS",
+    "generation": "3rd gen",
+    "platformCode": "XE30",
+    "yearFrom": 2014,
+    "yearTo": null,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 162,
+    "make": "Lexus",
+    "model": "GX",
+    "generation": "1st gen",
+    "platformCode": "J120",
+    "yearFrom": 2003,
+    "yearTo": 2009,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 163,
+    "make": "Lexus",
+    "model": "GX",
+    "generation": "2nd gen",
+    "platformCode": "J150",
+    "yearFrom": 2010,
+    "yearTo": 2023,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 164,
+    "make": "Lexus",
+    "model": "NX",
+    "generation": "1st gen",
+    "platformCode": "AZ10",
+    "yearFrom": 2015,
+    "yearTo": 2021,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 165,
+    "make": "Lexus",
+    "model": "NX",
+    "generation": "2nd gen",
+    "platformCode": "AZ20",
+    "yearFrom": 2022,
+    "yearTo": null,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 166,
+    "make": "Acura",
+    "model": "TL",
+    "generation": "2nd gen",
+    "platformCode": "UA4/UA5",
+    "yearFrom": 1999,
+    "yearTo": 2003,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 167,
+    "make": "Acura",
+    "model": "TL",
+    "generation": "3rd gen",
+    "platformCode": "UA6/UA7",
+    "yearFrom": 2004,
+    "yearTo": 2008,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 168,
+    "make": "Acura",
+    "model": "TL",
+    "generation": "4th gen",
+    "platformCode": "UA8/UA9",
+    "yearFrom": 2009,
+    "yearTo": 2014,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 169,
+    "make": "Acura",
+    "model": "TLX",
+    "generation": "1st gen",
+    "platformCode": "UB1/UB2",
+    "yearFrom": 2015,
+    "yearTo": 2020,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 170,
+    "make": "Acura",
+    "model": "TLX",
+    "generation": "2nd gen",
+    "platformCode": "UB5/UB6",
+    "yearFrom": 2021,
+    "yearTo": null,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 171,
+    "make": "Acura",
+    "model": "MDX",
+    "generation": "1st gen",
+    "platformCode": "YD1",
+    "yearFrom": 2001,
+    "yearTo": 2006,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 172,
+    "make": "Acura",
+    "model": "MDX",
+    "generation": "2nd gen",
+    "platformCode": "YD2",
+    "yearFrom": 2007,
+    "yearTo": 2013,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 173,
+    "make": "Acura",
+    "model": "MDX",
+    "generation": "3rd gen",
+    "platformCode": "YD3",
+    "yearFrom": 2014,
+    "yearTo": 2020,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 174,
+    "make": "Acura",
+    "model": "MDX",
+    "generation": "4th gen",
+    "platformCode": "YE1",
+    "yearFrom": 2022,
+    "yearTo": null,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 175,
+    "make": "Acura",
+    "model": "RDX",
+    "generation": "1st gen",
+    "platformCode": "TB1/TB2",
+    "yearFrom": 2007,
+    "yearTo": 2012,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 176,
+    "make": "Acura",
+    "model": "RDX",
+    "generation": "2nd gen",
+    "platformCode": "TB3/TB4",
+    "yearFrom": 2013,
+    "yearTo": 2018,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 177,
+    "make": "Acura",
+    "model": "RDX",
+    "generation": "3rd gen",
+    "platformCode": "TC1/TC2",
+    "yearFrom": 2019,
+    "yearTo": null,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 178,
+    "make": "Infiniti",
+    "model": "G35/G37",
+    "generation": "V35",
+    "platformCode": "V35",
+    "yearFrom": 2003,
+    "yearTo": 2007,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 179,
+    "make": "Infiniti",
+    "model": "G37",
+    "generation": "V36",
+    "platformCode": "V36",
+    "yearFrom": 2008,
+    "yearTo": 2013,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 180,
+    "make": "Infiniti",
+    "model": "Q50",
+    "generation": "1st gen",
+    "platformCode": "V37",
+    "yearFrom": 2014,
+    "yearTo": null,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 181,
+    "make": "Infiniti",
+    "model": "QX60",
+    "generation": "1st gen",
+    "platformCode": "L50",
+    "yearFrom": 2014,
+    "yearTo": 2020,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 182,
+    "make": "Infiniti",
+    "model": "QX60",
+    "generation": "2nd gen",
+    "platformCode": "L51",
+    "yearFrom": 2022,
+    "yearTo": null,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 183,
+    "make": "Hyundai",
+    "model": "Elantra",
+    "generation": "3rd gen (XD)",
+    "platformCode": "XD",
+    "yearFrom": 2001,
+    "yearTo": 2006,
+    "class": "Compact Car"
+  },
+  {
+    "id": 184,
+    "make": "Hyundai",
+    "model": "Elantra",
+    "generation": "4th gen (HD)",
+    "platformCode": "HD",
+    "yearFrom": 2007,
+    "yearTo": 2010,
+    "class": "Compact Car"
+  },
+  {
+    "id": 185,
+    "make": "Hyundai",
+    "model": "Elantra",
+    "generation": "5th gen (MD)",
+    "platformCode": "MD",
+    "yearFrom": 2011,
+    "yearTo": 2016,
+    "class": "Compact Car"
+  },
+  {
+    "id": 186,
+    "make": "Hyundai",
+    "model": "Elantra",
+    "generation": "6th gen (AD)",
+    "platformCode": "AD",
+    "yearFrom": 2017,
+    "yearTo": 2020,
+    "class": "Compact Car"
+  },
+  {
+    "id": 187,
+    "make": "Hyundai",
+    "model": "Elantra",
+    "generation": "7th gen (CN7)",
+    "platformCode": "CN7",
+    "yearFrom": 2021,
+    "yearTo": null,
+    "class": "Compact Car"
+  },
+  {
+    "id": 188,
+    "make": "Hyundai",
+    "model": "Sonata",
+    "generation": "4th gen (EF)",
+    "platformCode": "EF",
+    "yearFrom": 1999,
+    "yearTo": 2005,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 189,
+    "make": "Hyundai",
+    "model": "Sonata",
+    "generation": "5th gen (NF)",
+    "platformCode": "NF",
+    "yearFrom": 2006,
+    "yearTo": 2010,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 190,
+    "make": "Hyundai",
+    "model": "Sonata",
+    "generation": "6th gen (YF)",
+    "platformCode": "YF",
+    "yearFrom": 2011,
+    "yearTo": 2014,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 191,
+    "make": "Hyundai",
+    "model": "Sonata",
+    "generation": "7th gen (LF)",
+    "platformCode": "LF",
+    "yearFrom": 2015,
+    "yearTo": 2019,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 192,
+    "make": "Hyundai",
+    "model": "Sonata",
+    "generation": "8th gen (DN8)",
+    "platformCode": "DN8",
+    "yearFrom": 2020,
+    "yearTo": null,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 193,
+    "make": "Hyundai",
+    "model": "Tucson",
+    "generation": "1st gen (JM)",
+    "platformCode": "JM",
+    "yearFrom": 2005,
+    "yearTo": 2009,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 194,
+    "make": "Hyundai",
+    "model": "Tucson",
+    "generation": "2nd gen (LM)",
+    "platformCode": "LM",
+    "yearFrom": 2010,
+    "yearTo": 2015,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 195,
+    "make": "Hyundai",
+    "model": "Tucson",
+    "generation": "3rd gen (TL)",
+    "platformCode": "TL",
+    "yearFrom": 2016,
+    "yearTo": 2021,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 196,
+    "make": "Hyundai",
+    "model": "Tucson",
+    "generation": "4th gen (NX4)",
+    "platformCode": "NX4",
+    "yearFrom": 2022,
+    "yearTo": null,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 197,
+    "make": "Hyundai",
+    "model": "Santa Fe",
+    "generation": "1st gen (SM)",
+    "platformCode": "SM",
+    "yearFrom": 2001,
+    "yearTo": 2006,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 198,
+    "make": "Hyundai",
+    "model": "Santa Fe",
+    "generation": "2nd gen (CM)",
+    "platformCode": "CM",
+    "yearFrom": 2007,
+    "yearTo": 2012,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 199,
+    "make": "Hyundai",
+    "model": "Santa Fe",
+    "generation": "3rd gen (DM)",
+    "platformCode": "DM",
+    "yearFrom": 2013,
+    "yearTo": 2018,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 200,
+    "make": "Hyundai",
+    "model": "Santa Fe",
+    "generation": "4th gen (TM)",
+    "platformCode": "TM",
+    "yearFrom": 2019,
+    "yearTo": 2023,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 201,
+    "make": "Hyundai",
+    "model": "Santa Fe",
+    "generation": "5th gen (MX5)",
+    "platformCode": "MX5",
+    "yearFrom": 2024,
+    "yearTo": null,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 202,
+    "make": "Kia",
+    "model": "Optima",
+    "generation": "2nd gen (MG)",
+    "platformCode": "MG",
+    "yearFrom": 2006,
+    "yearTo": 2010,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 203,
+    "make": "Kia",
+    "model": "Optima",
+    "generation": "3rd gen (TF)",
+    "platformCode": "TF",
+    "yearFrom": 2011,
+    "yearTo": 2015,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 204,
+    "make": "Kia",
+    "model": "Optima",
+    "generation": "4th gen (JF)",
+    "platformCode": "JF",
+    "yearFrom": 2016,
+    "yearTo": 2020,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 205,
+    "make": "Kia",
+    "model": "K5",
+    "generation": "1st gen (DL3)",
+    "platformCode": "DL3",
+    "yearFrom": 2021,
+    "yearTo": null,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 206,
+    "make": "Kia",
+    "model": "Sorento",
+    "generation": "1st gen (BL)",
+    "platformCode": "BL",
+    "yearFrom": 2003,
+    "yearTo": 2009,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 207,
+    "make": "Kia",
+    "model": "Sorento",
+    "generation": "2nd gen (XM)",
+    "platformCode": "XM",
+    "yearFrom": 2011,
+    "yearTo": 2015,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 208,
+    "make": "Kia",
+    "model": "Sorento",
+    "generation": "3rd gen (UM)",
+    "platformCode": "UM",
+    "yearFrom": 2016,
+    "yearTo": 2020,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 209,
+    "make": "Kia",
+    "model": "Sorento",
+    "generation": "4th gen (MQ4)",
+    "platformCode": "MQ4",
+    "yearFrom": 2021,
+    "yearTo": null,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 210,
+    "make": "Kia",
+    "model": "Sportage",
+    "generation": "2nd gen (KM)",
+    "platformCode": "KM",
+    "yearFrom": 2005,
+    "yearTo": 2010,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 211,
+    "make": "Kia",
+    "model": "Sportage",
+    "generation": "3rd gen (SL)",
+    "platformCode": "SL",
+    "yearFrom": 2011,
+    "yearTo": 2016,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 212,
+    "make": "Kia",
+    "model": "Sportage",
+    "generation": "4th gen (QL)",
+    "platformCode": "QL",
+    "yearFrom": 2017,
+    "yearTo": 2022,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 213,
+    "make": "Kia",
+    "model": "Sportage",
+    "generation": "5th gen (NQ5)",
+    "platformCode": "NQ5",
+    "yearFrom": 2023,
+    "yearTo": null,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 214,
+    "make": "Kia",
+    "model": "Telluride",
+    "generation": "1st gen (ON)",
+    "platformCode": "ON",
+    "yearFrom": 2020,
+    "yearTo": null,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 215,
+    "make": "Kia",
+    "model": "Soul",
+    "generation": "1st gen (AM)",
+    "platformCode": "AM",
+    "yearFrom": 2010,
+    "yearTo": 2013,
+    "class": "Subcompact Car"
+  },
+  {
+    "id": 216,
+    "make": "Kia",
+    "model": "Soul",
+    "generation": "2nd gen (PS)",
+    "platformCode": "PS",
+    "yearFrom": 2014,
+    "yearTo": 2019,
+    "class": "Subcompact Car"
+  },
+  {
+    "id": 217,
+    "make": "Kia",
+    "model": "Soul",
+    "generation": "3rd gen (SK3)",
+    "platformCode": "SK3",
+    "yearFrom": 2020,
+    "yearTo": null,
+    "class": "Subcompact Car"
+  },
+  {
+    "id": 218,
+    "make": "Genesis",
+    "model": "G80",
+    "generation": "1st gen (DH)",
+    "platformCode": "DH",
+    "yearFrom": 2017,
+    "yearTo": 2020,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 219,
+    "make": "Genesis",
+    "model": "G80",
+    "generation": "2nd gen (RG3)",
+    "platformCode": "RG3",
+    "yearFrom": 2021,
+    "yearTo": null,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 220,
+    "make": "Genesis",
+    "model": "GV80",
+    "generation": "1st gen (JX1)",
+    "platformCode": "JX1",
+    "yearFrom": 2021,
+    "yearTo": null,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 221,
+    "make": "Chrysler",
+    "model": "300",
+    "generation": "1st gen (LX)",
+    "platformCode": "LX",
+    "yearFrom": 2005,
+    "yearTo": 2010,
+    "class": "Full-Size Sedan"
+  },
+  {
+    "id": 222,
+    "make": "Chrysler",
+    "model": "300",
+    "generation": "2nd gen (LD)",
+    "platformCode": "LD",
+    "yearFrom": 2011,
+    "yearTo": 2023,
+    "class": "Full-Size Sedan"
+  },
+  {
+    "id": 223,
+    "make": "Chrysler",
+    "model": "Town & Country",
+    "generation": "4th gen (RS)",
+    "platformCode": "RS",
+    "yearFrom": 2001,
+    "yearTo": 2007,
+    "class": "Minivan"
+  },
+  {
+    "id": 224,
+    "make": "Chrysler",
+    "model": "Town & Country",
+    "generation": "5th gen (RT)",
+    "platformCode": "RT",
+    "yearFrom": 2008,
+    "yearTo": 2016,
+    "class": "Minivan"
+  },
+  {
+    "id": 225,
+    "make": "Chrysler",
+    "model": "Pacifica",
+    "generation": "2nd gen (RU)",
+    "platformCode": "RU",
+    "yearFrom": 2017,
+    "yearTo": null,
+    "class": "Minivan"
+  },
+  {
+    "id": 226,
+    "make": "Dodge",
+    "model": "Charger",
+    "generation": "6th gen (LX)",
+    "platformCode": "LX",
+    "yearFrom": 2006,
+    "yearTo": 2010,
+    "class": "Full-Size Sedan"
+  },
+  {
+    "id": 227,
+    "make": "Dodge",
+    "model": "Charger",
+    "generation": "7th gen (LD)",
+    "platformCode": "LD",
+    "yearFrom": 2011,
+    "yearTo": 2023,
+    "class": "Full-Size Sedan"
+  },
+  {
+    "id": 228,
+    "make": "Dodge",
+    "model": "Challenger",
+    "generation": "3rd gen (LC)",
+    "platformCode": "LC",
+    "yearFrom": 2008,
+    "yearTo": 2023,
+    "class": "Sports Car"
+  },
+  {
+    "id": 229,
+    "make": "Dodge",
+    "model": "Grand Caravan",
+    "generation": "5th gen (RT)",
+    "platformCode": "RT",
+    "yearFrom": 2008,
+    "yearTo": 2020,
+    "class": "Minivan"
+  },
+  {
+    "id": 230,
+    "make": "Dodge",
+    "model": "Durango",
+    "generation": "1st gen",
+    "platformCode": "DN",
+    "yearFrom": 1998,
+    "yearTo": 2003,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 231,
+    "make": "Dodge",
+    "model": "Durango",
+    "generation": "2nd gen",
+    "platformCode": "HB",
+    "yearFrom": 2004,
+    "yearTo": 2009,
+    "class": "Full-Size SUV"
+  },
+  {
+    "id": 232,
+    "make": "Dodge",
+    "model": "Durango",
+    "generation": "3rd gen (WD)",
+    "platformCode": "WD",
+    "yearFrom": 2011,
+    "yearTo": null,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 233,
+    "make": "Ram",
+    "model": "1500",
+    "generation": "3rd gen (DR/DH)",
+    "platformCode": "DR",
+    "yearFrom": 2002,
+    "yearTo": 2008,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 234,
+    "make": "Ram",
+    "model": "1500",
+    "generation": "4th gen (DS)",
+    "platformCode": "DS",
+    "yearFrom": 2009,
+    "yearTo": 2018,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 235,
+    "make": "Ram",
+    "model": "1500",
+    "generation": "5th gen (DT)",
+    "platformCode": "DT",
+    "yearFrom": 2019,
+    "yearTo": null,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 236,
+    "make": "GMC",
+    "model": "Sierra 1500",
+    "generation": "1st gen",
+    "platformCode": "GMT800",
+    "yearFrom": 1999,
+    "yearTo": 2006,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 237,
+    "make": "GMC",
+    "model": "Sierra 1500",
+    "generation": "2nd gen",
+    "platformCode": "GMT900",
+    "yearFrom": 2007,
+    "yearTo": 2013,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 238,
+    "make": "GMC",
+    "model": "Sierra 1500",
+    "generation": "3rd gen",
+    "platformCode": "K2XX",
+    "yearFrom": 2014,
+    "yearTo": 2018,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 239,
+    "make": "GMC",
+    "model": "Sierra 1500",
+    "generation": "4th gen",
+    "platformCode": "T1XX",
+    "yearFrom": 2019,
+    "yearTo": null,
+    "class": "Full-Size Pickup"
+  },
+  {
+    "id": 240,
+    "make": "GMC",
+    "model": "Yukon",
+    "generation": "2nd gen",
+    "platformCode": "GMT800",
+    "yearFrom": 2000,
+    "yearTo": 2006,
+    "class": "Full-Size SUV"
+  },
+  {
+    "id": 241,
+    "make": "GMC",
+    "model": "Yukon",
+    "generation": "3rd gen",
+    "platformCode": "GMT900",
+    "yearFrom": 2007,
+    "yearTo": 2014,
+    "class": "Full-Size SUV"
+  },
+  {
+    "id": 242,
+    "make": "GMC",
+    "model": "Yukon",
+    "generation": "4th gen",
+    "platformCode": "K2UC",
+    "yearFrom": 2015,
+    "yearTo": 2020,
+    "class": "Full-Size SUV"
+  },
+  {
+    "id": 243,
+    "make": "GMC",
+    "model": "Yukon",
+    "generation": "5th gen",
+    "platformCode": "T1XC",
+    "yearFrom": 2021,
+    "yearTo": null,
+    "class": "Full-Size SUV"
+  },
+  {
+    "id": 244,
+    "make": "GMC",
+    "model": "Acadia",
+    "generation": "1st gen",
+    "platformCode": "Lambda",
+    "yearFrom": 2007,
+    "yearTo": 2016,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 245,
+    "make": "GMC",
+    "model": "Acadia",
+    "generation": "2nd gen",
+    "platformCode": "C1XX",
+    "yearFrom": 2017,
+    "yearTo": 2023,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 246,
+    "make": "Buick",
+    "model": "Enclave",
+    "generation": "1st gen",
+    "platformCode": "Lambda",
+    "yearFrom": 2008,
+    "yearTo": 2017,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 247,
+    "make": "Buick",
+    "model": "Enclave",
+    "generation": "2nd gen",
+    "platformCode": "C1XX",
+    "yearFrom": 2018,
+    "yearTo": null,
+    "class": "Midsize SUV"
+  },
+  {
+    "id": 248,
+    "make": "Buick",
+    "model": "Encore",
+    "generation": "1st gen",
+    "platformCode": "Gamma II",
+    "yearFrom": 2013,
+    "yearTo": 2022,
+    "class": "Subcompact SUV"
+  },
+  {
+    "id": 249,
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "generation": "4th gen (A4)",
+    "platformCode": "A4 (Mk4)",
+    "yearFrom": 1999,
+    "yearTo": 2005,
+    "class": "Compact Car"
+  },
+  {
+    "id": 250,
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "generation": "5th gen (A5)",
+    "platformCode": "A5 (Mk5)",
+    "yearFrom": 2005,
+    "yearTo": 2010,
+    "class": "Compact Car"
+  },
+  {
+    "id": 251,
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "generation": "6th gen (A6)",
+    "platformCode": "A6 (Mk6)",
+    "yearFrom": 2011,
+    "yearTo": 2018,
+    "class": "Compact Car"
+  },
+  {
+    "id": 252,
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "generation": "7th gen (A7)",
+    "platformCode": "A7 (Mk7)",
+    "yearFrom": 2019,
+    "yearTo": null,
+    "class": "Compact Car"
+  },
+  {
+    "id": 253,
+    "make": "Volkswagen",
+    "model": "Golf",
+    "generation": "4th gen (Mk4)",
+    "platformCode": "Mk4",
+    "yearFrom": 1999,
+    "yearTo": 2006,
+    "class": "Compact Car"
+  },
+  {
+    "id": 254,
+    "make": "Volkswagen",
+    "model": "Golf",
+    "generation": "5th gen (Mk5)",
+    "platformCode": "Mk5",
+    "yearFrom": 2006,
+    "yearTo": 2009,
+    "class": "Compact Car"
+  },
+  {
+    "id": 255,
+    "make": "Volkswagen",
+    "model": "Golf",
+    "generation": "6th gen (Mk6)",
+    "platformCode": "Mk6",
+    "yearFrom": 2010,
+    "yearTo": 2014,
+    "class": "Compact Car"
+  },
+  {
+    "id": 256,
+    "make": "Volkswagen",
+    "model": "Golf",
+    "generation": "7th gen (Mk7)",
+    "platformCode": "Mk7",
+    "yearFrom": 2015,
+    "yearTo": 2021,
+    "class": "Compact Car"
+  },
+  {
+    "id": 257,
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "generation": "1st gen",
+    "platformCode": "5N",
+    "yearFrom": 2009,
+    "yearTo": 2017,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 258,
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "generation": "2nd gen",
+    "platformCode": "AD/BW",
+    "yearFrom": 2018,
+    "yearTo": null,
+    "class": "Compact SUV"
+  },
+  {
+    "id": 259,
+    "make": "Volkswagen",
+    "model": "Passat",
+    "generation": "5th gen (B5)",
+    "platformCode": "B5",
+    "yearFrom": 1998,
+    "yearTo": 2005,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 260,
+    "make": "Volkswagen",
+    "model": "Passat",
+    "generation": "6th gen (B6)",
+    "platformCode": "B6",
+    "yearFrom": 2006,
+    "yearTo": 2010,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 261,
+    "make": "Volkswagen",
+    "model": "Passat",
+    "generation": "NMS (US)",
+    "platformCode": "NMS",
+    "yearFrom": 2012,
+    "yearTo": 2022,
+    "class": "Midsize Sedan"
+  },
+  {
+    "id": 262,
+    "make": "BMW",
+    "model": "3 Series",
+    "generation": "4th gen (E46)",
+    "platformCode": "E46",
+    "yearFrom": 1998,
+    "yearTo": 2006,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 263,
+    "make": "BMW",
+    "model": "3 Series",
+    "generation": "5th gen (E90)",
+    "platformCode": "E90",
+    "yearFrom": 2006,
+    "yearTo": 2011,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 264,
+    "make": "BMW",
+    "model": "3 Series",
+    "generation": "6th gen (F30)",
+    "platformCode": "F30",
+    "yearFrom": 2012,
+    "yearTo": 2018,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 265,
+    "make": "BMW",
+    "model": "3 Series",
+    "generation": "7th gen (G20)",
+    "platformCode": "G20",
+    "yearFrom": 2019,
+    "yearTo": null,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 266,
+    "make": "BMW",
+    "model": "5 Series",
+    "generation": "4th gen (E39)",
+    "platformCode": "E39",
+    "yearFrom": 1997,
+    "yearTo": 2003,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 267,
+    "make": "BMW",
+    "model": "5 Series",
+    "generation": "5th gen (E60)",
+    "platformCode": "E60",
+    "yearFrom": 2004,
+    "yearTo": 2010,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 268,
+    "make": "BMW",
+    "model": "5 Series",
+    "generation": "6th gen (F10)",
+    "platformCode": "F10",
+    "yearFrom": 2011,
+    "yearTo": 2016,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 269,
+    "make": "BMW",
+    "model": "5 Series",
+    "generation": "7th gen (G30)",
+    "platformCode": "G30",
+    "yearFrom": 2017,
+    "yearTo": 2023,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 270,
+    "make": "BMW",
+    "model": "X3",
+    "generation": "1st gen (E83)",
+    "platformCode": "E83",
+    "yearFrom": 2004,
+    "yearTo": 2010,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 271,
+    "make": "BMW",
+    "model": "X3",
+    "generation": "2nd gen (F25)",
+    "platformCode": "F25",
+    "yearFrom": 2011,
+    "yearTo": 2017,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 272,
+    "make": "BMW",
+    "model": "X3",
+    "generation": "3rd gen (G01)",
+    "platformCode": "G01",
+    "yearFrom": 2018,
+    "yearTo": null,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 273,
+    "make": "BMW",
+    "model": "X5",
+    "generation": "1st gen (E53)",
+    "platformCode": "E53",
+    "yearFrom": 2000,
+    "yearTo": 2006,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 274,
+    "make": "BMW",
+    "model": "X5",
+    "generation": "2nd gen (E70)",
+    "platformCode": "E70",
+    "yearFrom": 2007,
+    "yearTo": 2013,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 275,
+    "make": "BMW",
+    "model": "X5",
+    "generation": "3rd gen (F15)",
+    "platformCode": "F15",
+    "yearFrom": 2014,
+    "yearTo": 2018,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 276,
+    "make": "BMW",
+    "model": "X5",
+    "generation": "4th gen (G05)",
+    "platformCode": "G05",
+    "yearFrom": 2019,
+    "yearTo": null,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 277,
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "generation": "2nd gen (W203)",
+    "platformCode": "W203",
+    "yearFrom": 2001,
+    "yearTo": 2007,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 278,
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "generation": "3rd gen (W204)",
+    "platformCode": "W204",
+    "yearFrom": 2008,
+    "yearTo": 2014,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 279,
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "generation": "4th gen (W205)",
+    "platformCode": "W205",
+    "yearFrom": 2015,
+    "yearTo": 2021,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 280,
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "generation": "5th gen (W206)",
+    "platformCode": "W206",
+    "yearFrom": 2022,
+    "yearTo": null,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 281,
+    "make": "Mercedes-Benz",
+    "model": "E-Class",
+    "generation": "2nd gen (W210)",
+    "platformCode": "W210",
+    "yearFrom": 1996,
+    "yearTo": 2002,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 282,
+    "make": "Mercedes-Benz",
+    "model": "E-Class",
+    "generation": "3rd gen (W211)",
+    "platformCode": "W211",
+    "yearFrom": 2003,
+    "yearTo": 2009,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 283,
+    "make": "Mercedes-Benz",
+    "model": "E-Class",
+    "generation": "4th gen (W212)",
+    "platformCode": "W212",
+    "yearFrom": 2010,
+    "yearTo": 2016,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 284,
+    "make": "Mercedes-Benz",
+    "model": "E-Class",
+    "generation": "5th gen (W213)",
+    "platformCode": "W213",
+    "yearFrom": 2017,
+    "yearTo": 2023,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 285,
+    "make": "Mercedes-Benz",
+    "model": "GLC",
+    "generation": "1st gen (X253)",
+    "platformCode": "X253",
+    "yearFrom": 2016,
+    "yearTo": 2022,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 286,
+    "make": "Mercedes-Benz",
+    "model": "GLC",
+    "generation": "2nd gen (X254)",
+    "platformCode": "X254",
+    "yearFrom": 2023,
+    "yearTo": null,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 287,
+    "make": "Mercedes-Benz",
+    "model": "GLE",
+    "generation": "1st gen (W166)",
+    "platformCode": "W166",
+    "yearFrom": 2016,
+    "yearTo": 2019,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 288,
+    "make": "Mercedes-Benz",
+    "model": "GLE",
+    "generation": "2nd gen (W167)",
+    "platformCode": "W167",
+    "yearFrom": 2020,
+    "yearTo": null,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 289,
+    "make": "Audi",
+    "model": "A4",
+    "generation": "2nd gen (B6)",
+    "platformCode": "B6",
+    "yearFrom": 2002,
+    "yearTo": 2005,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 290,
+    "make": "Audi",
+    "model": "A4",
+    "generation": "3rd gen (B7)",
+    "platformCode": "B7",
+    "yearFrom": 2006,
+    "yearTo": 2008,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 291,
+    "make": "Audi",
+    "model": "A4",
+    "generation": "4th gen (B8)",
+    "platformCode": "B8",
+    "yearFrom": 2009,
+    "yearTo": 2016,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 292,
+    "make": "Audi",
+    "model": "A4",
+    "generation": "5th gen (B9)",
+    "platformCode": "B9",
+    "yearFrom": 2017,
+    "yearTo": null,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 293,
+    "make": "Audi",
+    "model": "Q5",
+    "generation": "1st gen (8R)",
+    "platformCode": "8R",
+    "yearFrom": 2009,
+    "yearTo": 2017,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 294,
+    "make": "Audi",
+    "model": "Q5",
+    "generation": "2nd gen (FY)",
+    "platformCode": "FY",
+    "yearFrom": 2018,
+    "yearTo": null,
+    "class": "Luxury SUV"
+  },
+  {
+    "id": 295,
+    "make": "Audi",
+    "model": "A6",
+    "generation": "2nd gen (C5)",
+    "platformCode": "C5",
+    "yearFrom": 1998,
+    "yearTo": 2004,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 296,
+    "make": "Audi",
+    "model": "A6",
+    "generation": "3rd gen (C6)",
+    "platformCode": "C6",
+    "yearFrom": 2005,
+    "yearTo": 2011,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 297,
+    "make": "Audi",
+    "model": "A6",
+    "generation": "4th gen (C7)",
+    "platformCode": "C7",
+    "yearFrom": 2012,
+    "yearTo": 2018,
+    "class": "Luxury Sedan"
+  },
+  {
+    "id": 298,
+    "make": "Audi",
+    "model": "A6",
+    "generation": "5th gen (C8)",
+    "platformCode": "C8",
+    "yearFrom": 2019,
+    "yearTo": null,
+    "class": "Luxury Sedan"
+  }
+]
