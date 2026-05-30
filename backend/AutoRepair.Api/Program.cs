@@ -37,7 +37,7 @@ builder.Services.AddSingleton(sp => {
     var cfg = sp.GetRequiredService<IConfiguration>();
     return new SearchClient(
         new Uri(cfg["AzureSearch:Endpoint"]!),
-        "servicemanuals-index",
+        cfg["AzureSearch:IndexName"]!,
         new AzureKeyCredential(cfg["AzureSearch:ApiKey"]!)
     );
 });
