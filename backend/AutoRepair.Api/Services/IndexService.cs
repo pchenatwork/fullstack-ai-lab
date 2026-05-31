@@ -1,18 +1,18 @@
 ﻿namespace AutoRepair.Api.Services;
 
 using AutoRepair.Api.Models;
-
-// The semantic configuration is defined here but only activates at query time when you set QueryType = Semantic (requires Basic SKU or higher).
-
 using Azure.Search.Documents.Indexes;
 using Azure.Search.Documents.Indexes.Models;
+
 public static class IndexService
 {
-    public static async Task EnsureIndexExistsAsync(SearchIndexClient client)
+    public static async Task EnsureIndexExistsAsync(SearchIndexClient client, string indexName)
     {
+        // Explicitly define fields so names, vector dims and metadata are exact
+
         var fields = new FieldBuilder().Build(typeof(ServiceManualChunk));
 
-        // HNSW vector algorithm for approximate nearest-neighbour search
+        // Reuse the existing HNSW algorithm/profile names (do NOT change)
         var vectorSearch = new VectorSearch
         {
             Profiles = {
@@ -23,7 +23,7 @@ public static class IndexService
             }
         };
 
-        // Semantic config — activates when QueryType = Semantic (Basic SKU+)
+        // Add semantic ranker config (activates when QueryType = Semantic — Basic+ SKU)
         var semanticSearch = new SemanticSearch
         {
             Configurations = {
@@ -35,7 +35,7 @@ public static class IndexService
             }
         };
 
-        var index = new SearchIndex("servicemanuals-index")
+        var index = new SearchIndex(indexName)
         {
             Fields = fields,
             VectorSearch = vectorSearch,
@@ -44,5 +44,4 @@ public static class IndexService
 
         await client.CreateOrUpdateIndexAsync(index);
     }
-
 }

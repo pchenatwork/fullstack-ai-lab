@@ -21,7 +21,7 @@ const projects: ProjectCard[] = [
   {
     title: "Vehicle Generation Lookup",
     description:
-      "Server-side paginated, sortable, searchable table over a vehicle reference dataset. Debounced search, TanStack Query, shared PagedRequest/PagedResult contract.",
+      "Server-side paginated, sortable, searchable table over a vehicle reference dataset. Debounced search, TanStack Query.",
     badges: ["React", "TanStack Query", "Debounce", ".NET API"],
     to: "/projects/vehicles",
     icon: Table2,

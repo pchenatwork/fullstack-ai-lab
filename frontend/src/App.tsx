@@ -1,7 +1,6 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
-import { Home } from "@/pages/Home";
-import { Contact } from "@/pages/Contact";
+import { AboutMe } from "@/pages/AboutMe";
 import { ProjectShowcase } from "@/pages/projects/ProjectShowcase";
 import { ManualAssistant } from "@/features/manual-assistant/ManualAssistant";
 import { VehicleTable } from "@/features/vehicles/VehicleTable";
@@ -10,8 +9,8 @@ const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
-      { path: "/", element: <Home /> },
-      { path: "/contact", element: <Contact /> },
+      { index: true, element: <Navigate to="/projects" replace /> },  // ← landing redirect
+      { path: "/about", element: <AboutMe /> },
       {
         path: "/projects",
         children: [

@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { Home, FolderKanban, Mail, ChevronLeft, Menu } from "lucide-react";
+import { Home, FolderKanban, ChevronLeft, Menu } from "lucide-react";
 
 interface SidebarProps {
   collapsed: boolean;
@@ -9,9 +9,8 @@ interface SidebarProps {
 }
 
 const navItems = [
-  { to: "/", label: "Home", icon: Home, end: true },
+  { to: "/about", label: "About Me", icon: Home, end: true },
   { to: "/projects", label: "Project Showcase", icon: FolderKanban, end: false },
-  { to: "/contact", label: "Contact", icon: Mail, end: true },
 ];
 
 export function Sidebar({
@@ -37,7 +36,8 @@ export function Sidebar({
         display: "flex",
         flexDirection: "column",
         transition: "width 0.2s ease",
-        overflow: "hidden",
+        overflowY: "auto",
+        overflowX: "hidden",
       }}
     >
       {/* Identity / top bar */}
@@ -47,62 +47,90 @@ export function Sidebar({
         }}
         style={{
           display: "flex",
-          alignItems: "center",
-          justifyContent: collapsed ? "center" : "space-between",
+          flexDirection: "column",
+          alignItems: collapsed ? "center" : "stretch",
           padding: collapsed ? "16px 8px" : "16px 14px",
           borderBottom: "1px solid rgba(255,255,255,0.08)",
           gap: 10,
           cursor: collapsed ? "pointer" : "default",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
-          <div
-            style={{
-              width: 38,
-              height: 38,
-              borderRadius: "50%",
-              background: "var(--accent)",
-              color: "#fff",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: 15,
-              fontWeight: 600,
-              flexShrink: 0,
-            }}
-          >
-            PC
-          </div>
-          {!collapsed && (
+        {/* Row 1: avatar + name + collapse toggle */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: collapsed ? "center" : "space-between",
+            gap: 12,
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
+            <div
+              style={{
+                width: 38,
+                height: 38,
+                borderRadius: "50%",
+                overflow: "hidden",
+                flexShrink: 0,
+              }}
+            >
+              <img
+                src="/pchen.jpg"
+                alt="Paul J. Chen"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            </div>
+            {!collapsed && (
             <div style={{ minWidth: 0 }}>
               <div style={{ color: "#fff", fontSize: 14, fontWeight: 600, lineHeight: 1.2 }}>
                 Paul Chen
               </div>
               <div style={{ color: "var(--nav-text)", fontSize: 11.5 }}>
-                Cloud &amp; AI Engineer
+                Sr. Software Engineer
               </div>
             </div>
+            )}
+          </div>
+          {!collapsed && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onToggleCollapse();
+              }}
+              aria-label="Collapse sidebar"
+              style={{
+                background: "transparent",
+                border: "none",
+                cursor: "pointer",
+                color: "var(--nav-text-bright)",
+                padding: "4px 6px",
+                borderRadius: 4,
+                display: "flex",
+                flexShrink: 0,
+              }}
+            >
+              <ChevronLeft size={18} />
+            </button>
           )}
         </div>
+
+        {/* Row 2: full-width title/description */}
         {!collapsed && (
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onToggleCollapse();
-            }}
-            aria-label="Collapse sidebar"
+          <div
             style={{
-              background: "transparent",
-              border: "none",
-              cursor: "pointer",
-              color: "var(--nav-text-bright)",
-              padding: "4px 6px",
-              borderRadius: 4,
-              display: "flex",
+              color: "var(--nav-text)",
+              fontSize: 11.5,
+              lineHeight: 1.5,
             }}
           >
-            <ChevronLeft size={18} />
-          </button>
+            Full Stack | C# &middot; .NET &middot; React &middot;
+            TypeScript &middot; SQL &middot; Azure &middot; Generative AI | Enterprise Applications
+          </div>
         )}
       </div>
 

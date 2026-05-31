@@ -2,7 +2,6 @@
 using Azure.AI.OpenAI;
 using Azure.Search.Documents;
 using Azure.Search.Documents.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OpenAI.Chat;
 
@@ -15,13 +14,13 @@ public class AskController(
     SearchClient searchClient,
     IConfiguration config) : ControllerBase
 {
-    private const string EmbeddingModel = "text-embedding-3-small";
+    private const string EmbeddingModel = "text-embedding-3-large"; // upgraded to large (3072 dims)
 
     [HttpPost]
     public async Task<IActionResult> AskAsync([FromBody] AskRequest req)
     {
         // Use model from request, fallback to gpt-4o
-        var chatModel = config["AzureOpenAI:ChatDeployment"]; // req.Model ?? "gpt-4.1-mini"; // "gpt -4o";
+        var chatModel = config["AzureOpenAI:ChatDeployment"] ?? "gpt-4o";
 
         // 1. Embed the user's question
         var embedClient = openAiClient.GetEmbeddingClient(EmbeddingModel);
@@ -41,12 +40,17 @@ public class AskController(
                     }
                 }
             }
-            // NOTE: To enable semantic reranker (requires Basic SKU), uncomment:
+            // NOTE: Semantic L2 reranker requires Basic SKU+ (Appendix D.6).
+            // On Free tier leave commented; query still runs as BM25 + vector.
             // QueryType = SearchQueryType.Semantic,
             // SemanticSearch = new SemanticSearchOptions {
-            //     SemanticConfigurationName = "semantic-config"
+            //     SemanticConfigurationName = "semantic-config"  // note: not SemanticSearchConfigurationName
             // }
         };
+
+        // Optional: scope retrieval to ONE manual to prevent cross-doc bleed (Appendix D.1)
+        if (!string.IsNullOrEmpty(req.Source))
+            searchOptions.Filter = $"Source eq '{req.Source}'";
 
         // 3. Execute hybrid search — pass question as keyword query + vector
         // Azure AI Search runs BM25 and KNN in parallel, merges via RRF
@@ -64,12 +68,10 @@ public class AskController(
 
             Rules:
             - If the answer is not in the excerpts, say so clearly — do not guess.
-            - Always identify which manual the answer comes from
-              (Honda Odyssey 2005 or Acura TL 2003).
             - For diagnostic questions, provide numbered troubleshooting steps.
-            - For specifications (torque, clearance, fluid capacity), quote
-              the exact value from the manual.
+            - For specifications (torque, clearance, fluid capacity), quote the exact value from the manual.
             - For DTC codes, explain what the code means and the diagnostic steps.
+            - Provide up to 3 page numbers that are relevant, ranking from high to low, you can say "Refer to page X, Y, Z" but do not fabricate page numbers.
             """;
 
         var userMessage = $"""
@@ -80,8 +82,7 @@ public class AskController(
             """;
 
         // 5. Call the selected model via Foundry Hub
-        // var chatClient = openAiClient.GetChatClient(chatModel);
-        var chatClient = openAiClient.GetChatClient(config["AzureOpenAI:ChatDeployment"]);
+        var chatClient = openAiClient.GetChatClient(chatModel);
         var response = await chatClient.CompleteChatAsync([
             new SystemChatMessage(systemPrompt),
             new UserChatMessage(userMessage)
