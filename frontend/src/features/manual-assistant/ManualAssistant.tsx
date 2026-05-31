@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Send, Info, Trash2 } from "lucide-react";
+import { Send, Info, Trash2, X } from "lucide-react";
 import { useQaStore } from "./store";
 import { useAskManual } from "./useAskManual";
 import { QaTurn } from "./QaTurn";
@@ -10,18 +10,92 @@ const STARTER_QUESTIONS = [
   "How do I reset the maintenance minder on a 2005 Honda Odyssey?",
 ];
 
+// Generate a harder math puzzle
+function generatePuzzle() {
+  const operation = Math.floor(Math.random() * 3); // 0=add, 1=subtract, 2=multiply
+  
+  let question: string;
+  let answer: number;
+  
+  if (operation === 0) {
+    // Addition with larger numbers
+    const num1 = Math.floor(Math.random() * 50) + 1;
+    const num2 = Math.floor(Math.random() * 50) + 1;
+    question = `${num1} + ${num2} = ?`;
+    answer = num1 + num2;
+  } else if (operation === 1) {
+    // Subtraction
+    const num1 = Math.floor(Math.random() * 50) + 1;
+    const num2 = Math.floor(Math.random() * 50) + 1;
+    const larger = Math.max(num1, num2);
+    const smaller = Math.min(num1, num2);
+    question = `${larger} − ${smaller} = ?`;
+    answer = larger - smaller;
+  } else {
+    // Multiplication with smaller numbers
+    const num1 = Math.floor(Math.random() * 12) + 2;
+    const num2 = Math.floor(Math.random() * 12) + 2;
+    question = `${num1} × ${num2} = ?`;
+    answer = num1 * num2;
+  }
+  
+  return { question, answer };
+}
+
 export function ManualAssistant() {
   const entries = useQaStore((s) => s.entries);
   const clear = useQaStore((s) => s.clear);
   const { ask, isPending } = useAskManual();
 
   const [question, setQuestion] = useState("");
+  const [showPuzzle, setShowPuzzle] = useState(false);
+  const [puzzle, setPuzzle] = useState(generatePuzzle());
+  const [userAnswer, setUserAnswer] = useState("");
+  const [puzzleSolved, setPuzzleSolved] = useState(false);
+  const [puzzleError, setPuzzleError] = useState("");
   const bottomRef = useRef<HTMLDivElement>(null);
 
   // Auto-scroll to the newest entry whenever the log changes.
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [entries]);
+
+  function openDownloadPuzzle() {
+    const newPuzzle = generatePuzzle();
+    setPuzzle(newPuzzle);
+    setUserAnswer("");
+    setPuzzleError("");
+    setPuzzleSolved(false);
+    setShowPuzzle(true);
+  }
+
+  function verifyPuzzle() {
+    const answer = parseInt(userAnswer.trim(), 10);
+    if (isNaN(answer)) {
+      setPuzzleError("Please enter a number");
+      return;
+    }
+    if (answer === puzzle.answer) {
+      setPuzzleSolved(true);
+      setTimeout(() => {
+        // Trigger download after short delay
+        window.open(
+          "https://stautorepairmanuals.blob.core.windows.net/repairmanuals/05-06%20Odyssey%20Service%20Manual.pdf",
+          "_blank"
+        );
+        setShowPuzzle(false);
+      }, 300);
+    } else {
+      setPuzzleError("Incorrect answer, try again");
+      setUserAnswer("");
+    }
+  }
+
+  function closePuzzleModal() {
+    setShowPuzzle(false);
+    setUserAnswer("");
+    setPuzzleError("");
+  }
 
   // Accepts the question text directly; defaults to the input-box value
   // so the existing text box and Enter key keep working with no changes.
@@ -34,7 +108,7 @@ export function ManualAssistant() {
     setQuestion("");
   }
 
-  function handleChipClick(q) {
+  function handleChipClick(q: string) {
     submit(q);
   }
 
@@ -50,14 +124,21 @@ export function ManualAssistant() {
           </p>
           <p style={{ color: "var(--accent)", fontSize: 13, marginTop: 8, margin: 0 }}>
             Source:{" "}
-            <a
-              href="https://pchenatwork.blob.core.windows.net/files/2005_2006_Honda_Odyssey_Service_Manual.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "var(--accent)", textDecoration: "underline" }}
+            <button
+              onClick={openDownloadPuzzle}
+              style={{
+                background: "none",
+                border: "none",
+                color: "var(--accent)",
+                textDecoration: "underline",
+                cursor: "pointer",
+                fontSize: 13,
+                padding: 0,
+                fontFamily: "inherit",
+              }}
             >
               2005–2006 Honda Odyssey Factory Shop Service Manual ↓
-            </a>
+            </button>
           </p>
         </div>
         {entries.length > 0 && (
@@ -227,10 +308,10 @@ export function ManualAssistant() {
             </text>
 
             {[
-              { x: 40, fill: "#F1EFE8", t: "Frontend", s: "React · Static Web Apps" },
-              { x: 200, fill: "#E6F1FB", t: "API", s: "C# ASP.NET · Render" },
-              { x: 360, fill: "#E1F5EE", t: "Vector search", s: "Azure AI Search" },
-              { x: 520, fill: "#EEEDFE", t: "LLM", s: "Azure OpenAI · GPT-4o" },
+              { x: 40, fill: "#F1EFE8", t: "Frontend", s: "React · Azure Static Web Apps" },
+              { x: 200, fill: "#E6F1FB", t: "API", s: "C# ASP.NET · Render.com" },
+              { x: 360, fill: "#E1F5EE", t: "Retrieval Layer", s: "Azure AI Search · Hybrid + Vector Search" },
+              { x: 520, fill: "#EEEDFE", t: "LLM", s: "Azure OpenAI · GPT-4.1-mini" },
             ].map((b) => (
               <g key={b.x}>
                 <rect x={b.x} y="60" width="140" height="80" fill={b.fill} stroke="#ccc" />
@@ -290,8 +371,8 @@ export function ManualAssistant() {
             </text>
 
             {[
-              { x: 40, w: 150, fill: "#FAEEDA", t: "PDF source", s: "Blob Storage" },
-              { x: 250, w: 180, fill: "#FAECE7", t: "Chunk + embed", s: "text-embedding-3-small" },
+              { x: 40, w: 150, fill: "#FAEEDA", t: "PDF source", s: "Azure Blob Storage" },
+              { x: 250, w: 180, fill: "#FAECE7", t: "Chunk + embed", s: "text-embedding-3-large" },
               { x: 490, w: 150, fill: "#E1F5EE", t: "Vector store", s: "Azure AI Search" },
             ].map((b) => (
               <g key={b.x}>
@@ -324,20 +405,17 @@ export function ManualAssistant() {
           </svg>
 
           <p style={{ marginTop: 16, fontSize: 12, color: "var(--text-muted)" }}>
-            <strong style={{ color: "var(--accent-dark)" }}>Design notes:</strong>
+            <strong style={{ color: "var(--accent-dark)" }}>Project notes:</strong>
           </p>
           <ul style={{ marginTop: 8, paddingLeft: 20, lineHeight: 1.6 }}>
             <li>
-              <strong>Render over AKS</strong> — Kubernetes was overkill and over-budget
-              for a single API; the free tier covers the demo.
+              <strong>Frontend - Azure Static Web Apps</strong> — Free tier.
             </li>
             <li>
-              <strong>Azure Static Web Apps</strong> — keeps the whole stack Azure-native
-              for a cohesive interview story.
+              <strong>WebAPI - Render.com</strong> — Free tier. Downside is, it takes 40+ seconds to cold start when first called.
             </li>
             <li>
-              <strong>AI Search free tier</strong> — vector search without standing
-              infrastructure cost.
+              <strong>AI Search free tier</strong> — vector search without standing infrastructure cost.
             </li>
           </ul>
           <p style={{ marginTop: 12, fontSize: 11, color: "#9AA0A6" }}>
@@ -345,6 +423,133 @@ export function ManualAssistant() {
           </p>
         </div>
       </details>
+
+      {/* Puzzle Modal */}
+      {showPuzzle && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: "rgba(0, 0, 0, 0.5)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 1000,
+          }}
+          onClick={closePuzzleModal}
+        >
+          <div
+            style={{
+              background: "var(--card-bg)",
+              borderRadius: 8,
+              padding: 32,
+              maxWidth: 400,
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+              border: "1px solid var(--border)",
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
+              <h2 style={{ margin: 0, fontSize: 18, fontWeight: 600, color: "var(--accent-dark)" }}>
+                Verify you're human
+              </h2>
+              <button
+                onClick={closePuzzleModal}
+                style={{
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  color: "var(--text-muted)",
+                  padding: 0,
+                  display: "flex",
+                }}
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {!puzzleSolved ? (
+              <>
+                <p style={{ color: "var(--text-muted)", fontSize: 13, marginBottom: 20 }}>
+                  Solve this simple puzzle to download the manual:
+                </p>
+
+                <div
+                  style={{
+                    background: "var(--card-bg)",
+                    border: "2px solid var(--border-soft)",
+                    borderRadius: 6,
+                    padding: 16,
+                    marginBottom: 16,
+                    textAlign: "center",
+                  }}
+                >
+                  <p style={{ fontSize: 20, fontWeight: 600, color: "var(--accent-dark)", margin: 0 }}>
+                    {puzzle.question}
+                  </p>
+                </div>
+
+                <input
+                  type="number"
+                  value={userAnswer}
+                  onChange={(e) => {
+                    setUserAnswer(e.target.value);
+                    setPuzzleError("");
+                  }}
+                  onKeyDown={(e) => e.key === "Enter" && verifyPuzzle()}
+                  placeholder="Your answer"
+                  autoFocus
+                  style={{
+                    width: "100%",
+                    padding: "10px 12px",
+                    border: `1px solid ${puzzleError ? "#d32f2f" : "var(--border)"}`,
+                    borderRadius: 4,
+                    fontSize: 14,
+                    fontFamily: "var(--font)",
+                    marginBottom: 8,
+                    boxSizing: "border-box",
+                  }}
+                />
+
+                {puzzleError && (
+                  <p style={{ fontSize: 12, color: "#d32f2f", marginBottom: 16, margin: 0 }}>
+                    {puzzleError}
+                  </p>
+                )}
+
+                <button
+                  onClick={verifyPuzzle}
+                  style={{
+                    width: "100%",
+                    background: "var(--accent)",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: 4,
+                    padding: "10px 16px",
+                    fontSize: 14,
+                    fontWeight: 600,
+                    cursor: "pointer",
+                  }}
+                >
+                  Verify & Download
+                </button>
+              </>
+            ) : (
+              <div style={{ textAlign: "center" }}>
+                <p style={{ fontSize: 14, color: "var(--accent)", fontWeight: 600, marginBottom: 8 }}>
+                  ✓ Correct!
+                </p>
+                <p style={{ fontSize: 13, color: "var(--text-muted)" }}>
+                  Your download should start shortly...
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

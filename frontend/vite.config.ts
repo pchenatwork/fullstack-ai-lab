@@ -11,5 +11,6 @@ export default defineConfig({
   server: {
     port: 3000,
     strictPort: true, // fail instead of silently picking another port if 3000 is taken
+    open: true, // open the browser on server start
   },
 });

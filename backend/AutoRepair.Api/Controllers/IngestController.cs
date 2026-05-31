@@ -23,10 +23,14 @@ public class IngestController(
 {
     private const int ChunkWords = 600;
     private const int OverlapWords = 90;
+    private const int EmbedBatchSize = 64;   // texts per embedding call (stay under TPM)
+    private const int UploadBatchSize = 500;  // docs per AI Search upload call
+
     private const string EmbeddingModel = "text-embedding-3-large"; // upgraded to large (3072 dims)
 
-    [HttpPost]
-    public async Task<IActionResult> IngestAsync([FromBody] IngestRequest req)
+    /*
+    [Obsolete("This endpoint is for one-time ingestion. It may be removed or changed in the future.")]
+    public async Task<IActionResult> IngestAsync_Old([FromBody] IngestRequest req)
     {
         var indexName = config["AzureSearch:IndexName"]!;
         // 1. Ensure the index exists (idempotent)
@@ -90,6 +94,7 @@ public class IngestController(
 
         return Ok(new { chunksIngested = rawChunks.Count, fileName = req.FileName });
     }
+    */
 
     private static List<string> ChunkText(string text, int chunkWords = 600, int overlapWords = 90)
     {
@@ -112,5 +117,102 @@ public class IngestController(
         if (name.Contains("odyssey")) return "odyssey_2005";
         if (name.Contains("acura") || name.Contains("tl")) return "acura_tl_2003";
         return name.Replace('-', '_').Replace(' ', '_');
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> IngestAsync([FromBody] IngestRequest req)
+    {
+        // 1. Ensure the index exists (idempotent). One config key is the
+        // single source of truth for the index name — rename in one place.
+        var indexName = config["AzureSearch:IndexName"]!;
+        await IndexService.EnsureIndexExistsAsync(indexClient, indexName);
+
+        // 2. Download PDF from Blob Storage
+        var blobClient = new BlobClient(
+            config["BlobStorage:ConnectionString"], "repairmanuals", req.FileName);
+        using var stream = await blobClient.OpenReadAsync();
+
+        // 3. Extract text with PdfPig
+        using var pdf = PdfDocument.Open(stream);
+        var fullText = string.Join(" ",
+            pdf.GetPages().Select(p => p.Text));
+
+        // 4. Split into ~600-word chunks with ~90-word overlap (Appendix D.3)
+        var words = fullText.Split(
+            (char[]?)null, StringSplitOptions.RemoveEmptyEntries);
+        var chunks = new List<(string text, int index)>();
+        int step = ChunkWords - OverlapWords;   // 510
+        for (int start = 0, i = 0; start < words.Length; start += step, i++)
+        {
+            var slice = words.Skip(start).Take(ChunkWords);
+            chunks.Add((string.Join(" ", slice), i));
+            if (start + ChunkWords >= words.Length) break;
+        }
+
+        // 5. Embed in batches, then upload in batches (Appendix D.9)
+        var sourceTag = ToSourceTag(req.FileName);
+        var embedClient = openAiClient.GetEmbeddingClient(EmbeddingModel);
+        var searchClient = new SearchClient(
+            new Uri(config["AzureSearch:Endpoint"]!),
+            indexName,
+            new AzureKeyCredential(config["AzureSearch:ApiKey"]!));
+
+        var uploadBatch = new List<ServiceManualChunk>(UploadBatchSize);
+
+        // Process chunks in embedding-sized groups
+        foreach (var group in chunks.Chunk(EmbedBatchSize))
+        {
+            // One embedding call for the whole group (array in, array out)
+            var inputs = group.Select(c => c.text).ToList();
+            var embeddings = await embedClient.GenerateEmbeddingsAsync(inputs);
+
+            // Pair each embedding back with its chunk (order is preserved)
+            for (int i = 0; i < group.Length; i++)
+            {
+                uploadBatch.Add(new ServiceManualChunk
+                {
+                    Id = $"{sourceTag}-{group[i].index}",
+                    FileName = req.FileName,
+                    Source = sourceTag,
+                    DocType = "procedure",
+                    Text = group[i].text,
+                    TextVector = embeddings.Value[i].ToFloats().ToArray()
+                });
+
+                if (uploadBatch.Count >= UploadBatchSize)
+                {
+                    await UploadWithRetryAsync(searchClient, uploadBatch);
+                    uploadBatch.Clear();
+                }
+            }
+        }
+
+        // Upload any remaining docs
+        if (uploadBatch.Count > 0)
+            await UploadWithRetryAsync(searchClient, uploadBatch);
+
+        return Ok(new { chunksIngested = chunks.Count, fileName = req.FileName, source = sourceTag });
+    }
+
+    // Exponential backoff on throttling (503 / 429). The SDK retries some
+    // transient faults itself; this guards the batch upload explicitly.
+    private static async Task UploadWithRetryAsync(
+        SearchClient client, IList<ServiceManualChunk> docs)
+    {
+        for (int attempt = 0; attempt < 5; attempt++)
+        {
+            try
+            {
+                await client.UploadDocumentsAsync(docs);
+                return;
+            }
+            catch (RequestFailedException ex) when (ex.Status == 503 || ex.Status == 429)
+            {
+                // 1s, 2s, 4s, 8s, 16s
+                await Task.Delay(TimeSpan.FromSeconds(Math.Pow(2, attempt)));
+            }
+        }
+        throw new InvalidOperationException(
+            "AI Search upload failed after retries (still throttled).");
     }
 }

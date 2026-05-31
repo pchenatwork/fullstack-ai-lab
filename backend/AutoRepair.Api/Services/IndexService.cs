@@ -9,21 +9,8 @@ public static class IndexService
     public static async Task EnsureIndexExistsAsync(SearchIndexClient client, string indexName)
     {
         // Explicitly define fields so names, vector dims and metadata are exact
-        var fields = new List<SearchField>
-        {
-            new SimpleField("id", SearchFieldDataType.String) { IsKey = true },
-            new SimpleField("fileName", SearchFieldDataType.String) { IsFilterable = true },
-            new SearchableField("content"),
-            new SearchField("contentVector", SearchFieldDataType.Collection(SearchFieldDataType.Single))
-            {
-                IsSearchable = true,
-                VectorSearchDimensions = 3072, // text-embedding-3-large
-                VectorSearchProfileName = "servicemanual-vector-profile" // preserve existing profile name
-            },
-            new SimpleField("source", SearchFieldDataType.String) { IsFilterable = true, IsFacetable = true },
-            new SimpleField("docType", SearchFieldDataType.String) { IsFilterable = true },
-            new SearchableField("section") { IsFilterable = true }
-        };
+
+        var fields = new FieldBuilder().Build(typeof(ServiceManualChunk));
 
         // Reuse the existing HNSW algorithm/profile names (do NOT change)
         var vectorSearch = new VectorSearch
@@ -42,18 +29,17 @@ public static class IndexService
             Configurations = {
                 new SemanticConfiguration(
                     "semantic-config",
-                    new SemanticPrioritizedFields
-                    {
-                        ContentFields = { new SemanticField("content") }
+                    new SemanticPrioritizedFields {
+                        ContentFields = { new SemanticField("Text") }
                     })
             }
         };
 
-        var index = new SearchIndex(indexName) 
+        var index = new SearchIndex(indexName)
         {
             Fields = fields,
             VectorSearch = vectorSearch,
-            SemanticSearch = semanticSearch
+            SemanticSearch = semanticSearch   // Defined now, used optionally
         };
 
         await client.CreateOrUpdateIndexAsync(index);
