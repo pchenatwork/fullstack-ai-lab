@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { Home, FolderKanban, Mail, ChevronLeft, Menu } from "lucide-react";
+import { Home, FolderKanban, ChevronLeft, Menu } from "lucide-react";
 
 interface SidebarProps {
   collapsed: boolean;

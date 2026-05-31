@@ -7,7 +7,7 @@ import { useDebounce } from "./useDebounce";
 import { columns } from "./columns";
 import { Pager } from "./Pager";
 
-const PAGE_SIZE = 20;
+const PAGE_SIZE = 10;
 
 export function VehicleTable() {
   // Feature-local UI state (deliberately useState, not a global store).
@@ -61,9 +61,9 @@ export function VehicleTable() {
       <h1 style={{ fontSize: 24, fontWeight: 600, color: "var(--accent-dark)", margin: 0 }}>
         Vehicle Generation Lookup
       </h1>
-      <p style={{ color: "var(--text-muted)", fontSize: 14, maxWidth: 680, marginTop: 6 }}>
-        Server-side paginated, sortable, and searchable. Search is debounced; sorting and
-        paging re-query the API.
+      <p style={{ color: "var(--text-muted)", fontSize: 14, maxWidth: 750, marginTop: 6 }}>
+        Demo of server-side pagination. Searching, sorting and
+        paging re-query the API. Search is debounced. 
       </p>
 
       <input
