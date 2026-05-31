@@ -71,7 +71,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(CorsPolicy, policy =>
         policy.WithOrigins(
                   "http://localhost:3000",          // Vite dev
-                  "https://YOUR-SWA-URL.azurestaticapps.net")  // deployed frontend
+                  "https://polite-flower-0a8dd360f.7.azurestaticapps.net/")  // deployed frontend
               .AllowAnyHeader()
               .AllowAnyMethod());
 });
