@@ -198,10 +198,16 @@ export function Sidebar({
             borderTop: "1px solid rgba(255,255,255,0.08)",
             color: "var(--nav-text)",
             fontSize: 11,
-            whiteSpace: "nowrap",
           }}
         >
-          Built on Azure Static Web Apps
+          Hosting: <br />
+          • Frontend React: Azure Static Web Apps <br />
+          • Backend API: Render.com (Free Tier)
+          <br /> <br />
+          
+          AI / Search: <br />
+          • Azure AI Foundry — GPT-4.1-mini · text-embedding-3-large <br />
+          • Azure AI Search — Hybrid RAG (BM25 + Vector)
         </div>
       )}
     </aside>

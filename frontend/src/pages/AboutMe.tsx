@@ -1,4 +1,5 @@
 import { Cloud, Server, Atom, FileText, Mail, Linkedin, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Combined "About Me" — title banner, bio, skill cards, contact (one scroll).
 
@@ -88,7 +89,7 @@ export function AboutMe() {
           That instinct shows up everywhere. I'm also a fairly capable shadetree mechanic, 
           and one of my long-running projects is keeping my 2006 Honda Odyssey on the road — 
           which means a lot of quality time with service manuals. 
-          The Service Manual RAG assistant on this site started as a tool for exactly that. 
+          The <Link to="/projects/rag-qa" style={{ color: "var(--accent)", textDecoration: "underline" }}>Service Manual RAG assistant</Link> on this site started as a tool for exactly that. 
           Instead of digging through a 2,700-page manual for a torque spec or a reset procedure, I can just ask, 
           and get the answer in seconds. It's a fully functional retrieval-augmented application: 
           it ingests the manuals, indexes them with Azure AI Search, and answers natural-language questions with Azure OpenAI. 

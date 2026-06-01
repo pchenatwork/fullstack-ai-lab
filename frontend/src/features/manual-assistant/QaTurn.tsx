@@ -12,7 +12,7 @@ export function QaTurn({ entry }: { entry: QaEntry }) {
             color: "#fff",
             borderRadius: "10px 10px 2px 10px",
             padding: "8px 13px",
-            fontSize: 13.5,
+            fontSize: 14.5,
             maxWidth: "75%",
           }}
         >
@@ -26,13 +26,13 @@ export function QaTurn({ entry }: { entry: QaEntry }) {
             color: isError ? "#A32D2D" : "var(--text)",
             borderRadius: "10px 10px 10px 2px",
             padding: "8px 13px",
-            fontSize: 13.5,
+            fontSize: 14.5,
             maxWidth: "80%",
             lineHeight: 1.6,
             whiteSpace: "pre-wrap",
           }}
         >
-          {entry.status === "pending" ? "…" : entry.answer}
+          {entry.status === "pending" ? "... Please wait ... Because the Web API is hosted on Render.com's free tier, response might take up to 45 seconds..." : entry.answer}
         </div>
       </div>
     </div>

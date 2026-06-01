@@ -6,9 +6,9 @@ import { QaTurn } from "./QaTurn";
 import { Architecture } from "./Architecture";
 
 const STARTER_QUESTIONS = [
-  "How do I replace the engine oil?",
-  "What does P0420 mean and how do I fix it?",
-  "How do I reset the maintenance minder?",
+  "Check engine codes: P0301, P0420. How to fix it?",
+  "How do I reset the maintenance reminder?",
+  "Passenger door lock is making buzzing noise when locking or unlocking. What can be the cause?",
 ];
 
 // Generate a harder math puzzle
@@ -121,10 +121,11 @@ export function ManualAssistant() {
           <h1 style={{ fontSize: 24, fontWeight: 600, color: "var(--accent-dark)", margin: 0 }}>
             Honda Odyssey 05-06 Service Manual RAG Q&amp;A
           </h1>
-          <p style={{ color: "var(--text-muted)", fontSize: 14, maxWidth: 750, marginTop: 6 }}>
-            Ask about the 2005–2006 Honda Odyssey. Answers are based on the service manual here, not general training data.
+          <p style={{ color: "var(--text-muted)", fontSize: 15, maxWidth: 800, marginTop: 6 }}>
+            Answers are specifically based on the 2005–2006 Honda Odyssey Service Manual below, not on general training data. 
+            Owners of other Honda/Acura vehicles equipped with J-series V6 engines may also find this information useful.
           </p>
-          <p style={{ color: "var(--accent)", fontSize: 13, marginTop: 8, margin: 0 }}>
+          <p style={{ color: "var(--accent)", fontSize: 14.5, marginTop: 8, margin: 0 }}>
             Source:{" "}
             <button
               onClick={openDownloadPuzzle}
@@ -134,7 +135,7 @@ export function ManualAssistant() {
                 color: "var(--accent)",
                 textDecoration: "underline",
                 cursor: "pointer",
-                fontSize: 13,
+                fontSize: 14,
                 padding: 0,
                 fontFamily: "inherit",
               }}
@@ -156,7 +157,7 @@ export function ManualAssistant() {
               color: "var(--accent)",
               borderRadius: 3,
               padding: "6px 12px",
-              fontSize: 13,
+              fontSize: 14,
               cursor: "pointer",
             }}
           >
@@ -197,7 +198,7 @@ export function ManualAssistant() {
           <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 12 }}>
             New here? Try one of these:
           </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 8 }}>
             {STARTER_QUESTIONS.map((q) => (
               <button
                 key={q}
@@ -238,7 +239,7 @@ export function ManualAssistant() {
         }}
       >
         {entries.length === 0 ? (
-          <div style={{ color: "var(--text-muted)", fontSize: 13.5, margin: "auto" }}>
+          <div style={{ color: "var(--text-muted)", fontSize: 14.5, margin: "auto" }}>
             Ask a question to get started.
           </div>
         ) : (
@@ -275,7 +276,7 @@ export function ManualAssistant() {
             border: "none",
             borderRadius: 4,
             padding: "10px 18px",
-            fontSize: 13.5,
+            fontSize: 14.5,
             fontWeight: 600,
             cursor: isPending || !question.trim() ? "not-allowed" : "pointer",
           }}
@@ -288,15 +289,27 @@ export function ManualAssistant() {
       <p
         style={{
           margin: "10px 0 0",
-          fontSize: 12,
+          fontSize: 13,
           color: "#9AA0A6",
           display: "flex",
           alignItems: "center",
           gap: 6,
         }}
       >
-        <Info size={13} /> Session log — each question is answered independently (no
-        conversational memory).
+        <Info size={13} /> 
+        Acknowledgment: The Service Manual PDF used in this project was kindly provided by user "WiiMaster" from{" "}
+        <a
+          href="https://www.odyclub.com/threads/free-3rd-gen-service-manuals.382826/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "#9AA0A6",
+            textDecoration: "underline",
+          }}
+        >
+          odyclub.com
+        </a>
+        .
       </p>
         </>
       ) : (
