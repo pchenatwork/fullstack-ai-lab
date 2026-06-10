@@ -10,7 +10,12 @@ interface SidebarProps {
 
 const navItems = [
   { to: "/about", label: "About Me", icon: Home, end: true },
-  { to: "/projects", label: "Project Showcase", icon: FolderKanban, end: false },
+  {
+    to: "/projects",
+    label: "Project Showcase",
+    icon: FolderKanban,
+    end: false,
+  },
 ];
 
 export function Sidebar({
@@ -64,7 +69,14 @@ export function Sidebar({
             gap: 12,
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              minWidth: 0,
+            }}
+          >
             <div
               style={{
                 width: 38,
@@ -86,14 +98,21 @@ export function Sidebar({
               />
             </div>
             {!collapsed && (
-            <div style={{ minWidth: 0 }}>
-              <div style={{ color: "#fff", fontSize: 14, fontWeight: 600, lineHeight: 1.2 }}>
-                Paul Chen
+              <div style={{ minWidth: 0 }}>
+                <div
+                  style={{
+                    color: "#fff",
+                    fontSize: 14,
+                    fontWeight: 600,
+                    lineHeight: 1.2,
+                  }}
+                >
+                  Paul Chen
+                </div>
+                <div style={{ color: "var(--nav-text)", fontSize: 11.5 }}>
+                  Sr. Software Engineer
+                </div>
               </div>
-              <div style={{ color: "var(--nav-text)", fontSize: 11.5 }}>
-                Sr. Software Engineer
-              </div>
-            </div>
             )}
           </div>
           {!collapsed && (
@@ -128,8 +147,9 @@ export function Sidebar({
               lineHeight: 1.5,
             }}
           >
-            Full Stack | C# &middot; .NET &middot; React &middot;
-            TypeScript &middot; SQL &middot; Azure &middot; Generative AI | Enterprise Applications
+            Full Stack | C# &middot; .NET &middot; React &middot; TypeScript
+            &middot; SQL &middot; Azure &middot; Generative AI | Enterprise
+            Applications
           </div>
         )}
       </div>
@@ -159,7 +179,12 @@ export function Sidebar({
       {/* Nav */}
       <nav
         className={mobileOpen ? "sidebar-nav open" : "sidebar-nav"}
-        style={{ padding: "10px 8px", display: "flex", flexDirection: "column", gap: 3 }}
+        style={{
+          padding: "10px 8px",
+          display: "flex",
+          flexDirection: "column",
+          gap: 3,
+        }}
       >
         {navItems.map(({ to, label, icon: Icon, end }) => {
           const active = isActive(to, end);
@@ -203,11 +228,7 @@ export function Sidebar({
           Hosting: <br />
           • Frontend React: Azure Static Web Apps <br />
           • Backend API: Render.com (Free Tier)
-          <br /> <br />
-          
-          AI / Search: <br />
-          • Azure AI Foundry — GPT-4.1-mini · text-embedding-3-large <br />
-          • Azure AI Search — Hybrid RAG (BM25 + Vector)
+          <br />
         </div>
       )}
     </aside>

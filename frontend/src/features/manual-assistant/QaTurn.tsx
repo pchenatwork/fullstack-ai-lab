@@ -32,7 +32,9 @@ export function QaTurn({ entry }: { entry: QaEntry }) {
             whiteSpace: "pre-wrap",
           }}
         >
-          {entry.status === "pending" ? "... Please wait ... Because the Web API is hosted on Render.com's free tier, response might take up to 45 seconds..." : entry.answer}
+          {entry.status === "pending"
+            ? "Loading… (first request may take up to 45 seconds due to Render.com free tier cold start)"
+            : entry.answer}
         </div>
       </div>
     </div>
