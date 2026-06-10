@@ -70,4 +70,4 @@ public class ServiceManualChunk
 }
 
 public record IngestRequest(string FileName);
-public record AskRequest(string Question, string? Model = "gpt-4.1-mini", string? Source = null);
+public record AskRequest(string Question);

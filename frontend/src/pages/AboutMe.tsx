@@ -1,4 +1,12 @@
-import { Cloud, Server, Atom, FileText, Mail, Linkedin, Github } from "lucide-react";
+import {
+  Cloud,
+  Server,
+  Atom,
+  FileText,
+  Mail,
+  Linkedin,
+  Github,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Combined "About Me" — title banner, bio, skill cards, contact (one scroll).
@@ -60,12 +68,27 @@ export function AboutMe() {
   return (
     <div>
       {/* ---- Title banner ---- */}
-      <h1 style={{ fontSize: 24, fontWeight: 600, color: "var(--accent-dark)", margin: 0 }}>
+      <h1
+        style={{
+          fontSize: 24,
+          fontWeight: 600,
+          color: "var(--accent-dark)",
+          margin: 0,
+        }}
+      >
         Paul J. Chen
       </h1>
-      <div style={{ fontSize: 13.5, color: "var(--accent)", fontWeight: 500, marginTop: 4 }}>
-        Full-Stack Software Engineer <span style={{ color: "var(--nav-text)" }}>·</span> C# /
-        .NET <span style={{ color: "var(--nav-text)" }}>·</span> React / TypeScript{" "}
+      <div
+        style={{
+          fontSize: 13.5,
+          color: "var(--accent)",
+          fontWeight: 500,
+          marginTop: 4,
+        }}
+      >
+        Full-Stack Software Engineer{" "}
+        <span style={{ color: "var(--nav-text)" }}>·</span> C# / .NET{" "}
+        <span style={{ color: "var(--nav-text)" }}>·</span> React / TypeScript{" "}
         <span style={{ color: "var(--nav-text)" }}>·</span> Azure{" "}
         <span style={{ color: "var(--nav-text)" }}>·</span> GenAI
       </div>
@@ -81,24 +104,36 @@ export function AboutMe() {
         }}
       >
         <p style={{ margin: "0 0 14px" }}>
-          I'm a software engineer by trade and a builder by nature. 
-          I write C# / .NET, SQL, and React / TypeScript for a living, 
-          and the instinct behind it doesn't clock out at the end of the day: I like to understand how things work and fix them myself.
+          I'm a software engineer by trade and a builder by nature. I write C# /
+          .NET, SQL, and React / TypeScript for a living, and the instinct
+          behind it doesn't clock out at the end of the day: I like to
+          understand how things work and fix them myself.
         </p>
         <p style={{ margin: "0 0 14px" }}>
-          That instinct shows up everywhere. I'm also a fairly capable shadetree mechanic, 
-          and one of my long-running projects is keeping my 2006 Honda Odyssey on the road — 
-          which means a lot of quality time with service manuals. 
-          The <Link to="/projects/rag-qa" style={{ color: "var(--accent)", textDecoration: "underline" }}>Service Manual RAG assistant</Link> on this site started as a tool for exactly that. 
-          Instead of digging through a 2,700-page manual for a torque spec or a reset procedure, I can just ask, 
-          and get the answer in seconds. It's a fully functional retrieval-augmented application: 
-          it ingests the manuals, indexes them with Azure AI Search, and answers natural-language questions with Azure OpenAI. 
-          It showcases the GenAI and cloud-native work I do professionally, but I built it because I actually use it.
+          That instinct shows up everywhere. I'm also a fairly capable shadetree
+          mechanic, and one of my long-running projects is keeping my 2006 Honda
+          Odyssey on the road — which means a lot of quality time with service
+          manuals. The{" "}
+          <Link
+            to="/projects/rag-qa"
+            style={{ color: "var(--accent)", textDecoration: "underline" }}
+          >
+            Service Manual RAG assistant
+          </Link>{" "}
+          on this site started as a tool for exactly that. Instead of digging
+          through a 2,700-page manual for a torque spec or a reset procedure, I
+          can just ask, and get the answer in seconds. It's a fully functional
+          retrieval-augmented application: it ingests the manuals, indexes them
+          with Azure AI Search, and answers natural-language questions with
+          Azure OpenAI. It showcases the GenAI and cloud-native work I do
+          professionally, but I built it because I actually use it.
         </p>
         <p style={{ margin: 0 }}>
-          That's the theme here. The projects in the showcase are things I made because I wanted them to exist, 
-          then made robust enough to rely on — and they double as a window into how I work as an engineer. Have a look around, 
-          and if you'd like to talk shop (software or otherwise), I'm easy to reach below.
+          That's the theme here. The projects in the showcase are things I made
+          because I wanted them to exist, then made robust enough to rely on —
+          and they double as a window into how I work as an engineer. Have a
+          look around, and if you'd like to talk shop (software or otherwise),
+          I'm easy to reach below.
         </p>
       </div>
 
@@ -123,7 +158,14 @@ export function AboutMe() {
                 padding: 16,
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: 9, marginBottom: 10 }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 9,
+                  marginBottom: 10,
+                }}
+              >
                 <Icon size={19} color="var(--accent)" />
                 <span
                   style={{
@@ -163,7 +205,12 @@ export function AboutMe() {
 
       {/* ---- Contact ---- */}
       <h2
-        style={{ fontSize: 18, fontWeight: 600, color: "var(--accent-dark)", margin: "32px 0 0" }}
+        style={{
+          fontSize: 18,
+          fontWeight: 600,
+          color: "var(--accent-dark)",
+          margin: "32px 0 0",
+        }}
       >
         Get in touch
       </h2>
@@ -186,10 +233,20 @@ export function AboutMe() {
         <a href="mailto:pchenatwork@gmail.com" style={link}>
           <Mail size={17} /> Email
         </a>
-        <a href="https://linkedin.com/in/paul-j-chen/" target="_blank" rel="noopener" style={link}>
+        <a
+          href="https://linkedin.com/in/paul-j-chen/"
+          target="_blank"
+          rel="noopener"
+          style={link}
+        >
           <Linkedin size={17} /> LinkedIn
         </a>
-        <a href="https://github.com/pchenatwork/fullstack-ai-lab" target="_blank" rel="noopener" style={link}>
+        <a
+          href="https://github.com/pchenatwork/fullstack-ai-lab"
+          target="_blank"
+          rel="noopener"
+          style={link}
+        >
           <Github size={17} /> GitHub
         </a>
       </div>
