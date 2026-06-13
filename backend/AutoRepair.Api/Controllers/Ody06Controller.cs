@@ -17,7 +17,8 @@ public class Ody06Controller(
     AzureOpenAIClient openAiClient,
     SearchClient searchClient,
     SearchIndexClient indexClient,
-    IConfiguration config) : ControllerBase
+    IConfiguration config,
+    ILogger<Ody06Controller> logger) : ControllerBase
 {
     private const string EmbeddingModel = "text-embedding-3-large"; // upgraded to large (3072 dims)
     private const int ChunkWords = 600;
@@ -115,13 +116,20 @@ public class Ody06Controller(
         var indexName = config["AzureSearch:IndexName"]!;
         await IndexService.EnsureIndexExistsAsync(indexClient, indexName);
 
-        // 2. Download PDF from Blob Storage
+        // 2. Download PDF from Blob Storage — SINGLE download with retry
+        // (Prevents lazy-loading re-fetches during PDF parsing)
         var blobClient = new Azure.Storage.Blobs.BlobClient(
             config["BlobStorage:ConnectionString"], "repairmanuals", req.FileName);
-        using var stream = await blobClient.OpenReadAsync();
+        var runId = Guid.NewGuid().ToString("N").Substring(0, 8);
+        byte[] pdfBytes = await DownloadOnceAsync(blobClient);
 
-        // 3. Extract text with PdfPig
-        using var pdf = PdfDocument.Open(stream);
+        // Log single download per blob (guard against egress spike)
+        logger.LogInformation(
+            "Blob {BlobName} downloaded once ({Bytes} bytes) for ingestion run {RunId}.",
+            req.FileName, pdfBytes.Length, runId);
+
+        // 3. Extract text with PdfPig — now parsing from in-memory byte array
+        using var pdf = PdfDocument.Open(pdfBytes);
         var fullText = string.Join(" ",
             pdf.GetPages().Select(p => p.Text));
 
@@ -176,6 +184,29 @@ public class Ody06Controller(
             await UploadWithRetryAsync(searchClient, uploadBatch);
 
         return Ok(new { chunksIngested = chunks.Count, fileName = req.FileName, source = sourceTag });
+    }
+
+    /// <summary>
+    /// Download a blob to a byte array with exponential backoff retry.
+    /// Ensures exactly ONE GetBlob operation per blob per ingestion run.
+    /// </summary>
+    private async Task<byte[]> DownloadOnceAsync(Azure.Storage.Blobs.BlobClient blobClient)
+    {
+        for (int attempt = 0; attempt < 5; attempt++)
+        {
+            try
+            {
+                var response = await blobClient.DownloadContentAsync();
+                return response.Value.Content.ToArray();
+            }
+            catch (Azure.RequestFailedException ex) when (ex.Status == 503 || ex.Status == 429)
+            {
+                // 1s, 2s, 4s, 8s, 16s
+                await Task.Delay(TimeSpan.FromSeconds(Math.Pow(2, attempt)));
+            }
+        }
+        throw new InvalidOperationException(
+            $"Blob download failed after retries: {blobClient.Uri}");
     }
 
     /// <summary>

@@ -1,5 +1,6 @@
 ﻿## Solution level .gitignore ##
 dev_notes/
+.docs/
 
 # OS
 .DS_Store
